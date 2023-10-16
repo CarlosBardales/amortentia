@@ -27,13 +27,50 @@ html{
    justify-content: center;
    top: 0;
    width: 100%;
-   border: 1px solid green;
    background-color: black;
 }
 
 .header-promocional span{
    color: white;
-
+ 
 }
 
+.header{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.logo{
+   display: flex;
+   align-items: center;
+   margin-bottom: 1rem;
+}
+.logo img{
+   width: 20rem;
+}
+
+.menu{
+   display: flex;
+   list-style: none;
+}
+
+.menu li {
+   margin: 0 0.5rem;
+
+}
+.menu li a {
+   font-weight: 700;
+   text-decoration: none;
+ }
+
+.content{
+   width: 100%;
+   padding: 2rem 1rem;
+       text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  
  
+}
