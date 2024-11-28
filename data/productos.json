@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "nombre": "Ramo Astromelia - Lila",
+        "precio": 89.00,
+        "descripcion": "6 Rosas naturales color lila con astromelias y fino follaje. Incluye mensaje para tarjeta Oh Surprise.",
+        "imagen": "../img/productos/m1.jpg",
+        "imagen2": "../img/productos/m1-2.jpg",
+        "imagen3": "../img/productos/m1-3.jpg",
+        "categoria": "Flores"
+    },
+    {
+        "id": 2,
+        "nombre": "Ramo Rosas - Rojo",
+        "precio": 120.00,
+        "descripcion": "12 Rosas rojas frescas con follaje verde y envoltura decorativa. Ideal para ocasiones románticas.",
+        "imagen": "../img/productos/m2.jpg",
+        "imagen2": "../img/productos/m2-2.jpg",
+        "imagen3": "../img/productos/m2-3.jpg",
+        "categoria": "Flores"
+    },
+    {
+        "id": 3,
+        "nombre": "Caja de Chocolate Gourmet",
+        "precio": 150.00,
+        "descripcion": "Caja premium con una selección de chocolates gourmet. Perfecto para regalar en cualquier ocasión.",
+        "imagen": "../img/productos/m3.jpg",
+        "imagen2": "../img/productos/m3-2.jpg",
+        "imagen3": "../img/productos/m3-3.jpg",
+        "categoria": "Dulces"
+    },
+    {
+        "id": 4,
+        "nombre": "Peluche Grande",
+        "precio": 250.00,
+        "descripcion": "Peluche de alta calidad con textura suave y detalles adorables. Un regalo ideal para sorprender.",
+        "imagen": "../img/productos/m4.jpg",
+        "imagen2": "../img/productos/m4-2.jpg",
+        "imagen3": "../img/productos/m4-3.jpg",
+        "categoria": "Regalos"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "nombre": "Producto Destacado 1",
+        "imagen": "../img/prodes/prodes1.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Producto Destacado 2",
+        "imagen": "../img/prodes/prodes2.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Producto Destacado 3",
+        "imagen": "../img/prodes/prodes3.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Producto Destacado 4",
+        "imagen": "../img/prodes/prodes4.jpg"
+    }
+]
