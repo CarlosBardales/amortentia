@@ -1,62 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
+
+    <link rel="stylesheet" href="../css/carousel.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href=tablet1.css media="screen and (min-width: 600px)">
-    <link rel="stylesheet" href=pc.css media="screen and (min-width: 900px)">
-
-    <title>Document</title>
+   
+    <title>Inicio - Tienda A</title>
 </head>
 <body>
-    <header class="header">
-
-        <div class="header-promocional">
-            <span class="">Envío gratis para Cajamarca en compras mayores a S/ 60</span>
-        </div>
-
-        <figure class="logo">
-            <img src="./img/logo.png" alt="Amortentia">
-        </figure>
-        <nav class="navbar">
-            <ul class="menu">
-                <li>
-                    <a href=""> Inicio</a>
-                </li>
-                <li>
-                    <a href="">Catálogo</a>
-                </li>
-                <li>
-                    <a href="">Categorias</a>
-                </li>
-                <li>
-                    <a href="">Nosotros</a>
-                </li>
+    <header>
+        <h1>Amortentia Regalos</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
+            <a href="carrito.html" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </a>
         </nav>
     </header>
-    <main class="main">
-        <section class="content">
-            <figure class="amortentia-group">
-                
-                <p> Donde los sueños se convierten en regalos.</p>
-            </figure>
+    <main>
+        <section id="productos-destacados">
+            <h2>Productos Destacados</h2>
+            <div id="carousel-container">
+                <button id="carousel-prev">&#8249;</button>
+                <div id="destacados-carousel">
+                    <!-- Los productos destacados se mostrarán aquí dinámicamente -->
+                </div>
+                <button id="carousel-next">&#8250;</button>
+            </div>
         </section>
-        <aside class="routes">
-            <h2> Lo más vendido</h2>
-            <figure class="routes-img">
-                <img src="./img/bebida.jpg" alt="Amortentia">
-                <img src="./img/llavero.jpg" alt="Amortentia">
-                <img src="./img/plantas.jpg" alt="Amortentia">
-                <img src="./img/spiderman.jpg" alt="Amortentia">
-                <img src="./img/mario.jpg" alt="Amortentia">
-            </figure>
-        </aside>
     </main>
-    <footer class="footer">
-        <p>❤️ </p>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#">Preguntas frecuentes</a></li>
+                <li><a href="#">Políticas de Privacidad</a></li>
+                <li><a href="#">Términos y Condiciones</a></li>
+                <li><a href="#">Contáctanos</a></li>
+                <li><a href="#">Prensa</a></li>
+            </ul>
+        </nav>
+        <p>RUC: 107023961 | Amortentia Regalos</p>
+        <p>&copy; 2024 Amortentia Perú | Derechos reservados</p>
     </footer>
+    <script src="../js/carousel.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/carrito.js"></script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            inicializarCarrusel();
+        });
+    </script>
 </body>
 </html>
