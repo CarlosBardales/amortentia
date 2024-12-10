@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <title>Detalle del Producto</title>
 </head>
 <body>
@@ -11,27 +12,36 @@
         <h1>Amortentia Regalos</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="../index.html">Inicio</a></li>
                 <li><a href="productos.html">Productos</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
+            <a href="carrito.html" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </a>
         </nav>
     </header>
     <main>
         <div class="detalle-producto">
-            <!-- Sección de imagen y galería -->
-            <div class="detalle-imagen">
-                <img id="imagen-principal" src="" alt="Producto" class="imagen-principal">
-                <div id="galeria-imagenes" class="galeria-imagenes"></div>
+            <!-- Contenedor de la imagen principal -->
+            <div>
+                <div class="imagen-principal-container">
+                    <img id="imagen-principal" src="" alt="Imagen principal del producto">
+                </div>
+                <!-- Galería de imágenes -->
+                <div id="galeria-imagenes" class="galeria-secundaria"></div>
+    
             </div>
 
             <!-- Información del producto -->
             <div class="detalle-info">
                 <h2 id="nombre-producto"></h2>
                 <p id="codigo-producto"></p>
-                <p id="precio-producto"></p>
+                <p id="precio-producto" class="precio-producto"></p>
                 <p id="descripcion-producto"></p>
-
+               
+                 <!--  <label for="cantidad">Cantidad:</label> -->
                 <!-- Formulario de personalización -->
                 <form id="form-personalizar">
                     <label for="turno-entrega">Turno de entrega</label>
@@ -47,7 +57,7 @@
                     <textarea id="mensaje-tarjeta" maxlength="240"></textarea>
 
                     <label for="cantidad">Cantidad</label>
-                    <input type="number" id="cantidad" min="1" value="1">
+                    <input type="number" id="cantidad" name="cantidad" min="1" value="1" required>
 
                     <button type="button" id="agregar-carrito">Añadir al carrito</button>
                 </form>
@@ -58,5 +68,6 @@
         <p>© 2024 Amortentia Regalos. Todos los derechos reservados.</p>
     </footer>
     <script src="../js/producto-detalle.js"></script>
+    
 </body>
 </html>

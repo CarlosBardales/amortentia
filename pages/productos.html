@@ -12,18 +12,19 @@
         <h1>Amortentia Regalos</h1>
         <nav>
             <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="../index.html">Inicio</a></li>
                 <li><a href="productos.html">Productos</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
             <a href="carrito.html" class="cart-icon">
                 <i class="fas fa-shopping-cart"></i>
-                <span id="cart-count">0</span>
+                <span id="cart-count" style="display: none;">0</span> <!-- Aquí se muestra el número de productos -->
             </a>
+            
         </nav>
     </header>
     <main>
-        <div id="productos-container"></div>
+        <div id="productos-container" class="productos-container"></div>
     </main>
     <script src="../js/productos.js"></script>
 </body>
