@@ -294,4 +294,28 @@
         "imagen3": "../img/productos/p7.jpg",
         "categoria": "Peluches"
     }
+    ,
+    {
+        "id": 26,
+        "nombre": "Coneja 23cm",
+        "precio": 25.00,
+        "precioOriginal": 30.00,
+        "descripcion": "Coneja con orejas largas, 2 colores disponibles",
+        "imagen": "../img/productos/p5.JPG",
+        "imagen2": "../img/productos/p6.jpg",
+        "imagen3": "../img/productos/p7.jpg",
+        "categoria": "Peluches"
+    }
+    ,
+    {
+        "id": 27,
+        "nombre": "Coneja 23cm",
+        "precio": 25.00,
+        "precioOriginal": 30.00,
+        "descripcion": "Coneja con orejas largas, 2 colores disponibles",
+        "imagen": "../img/productos/p5.JPG",
+        "imagen2": "../img/productos/p6.jpg",
+        "imagen3": "../img/productos/p7.jpg",
+        "categoria": "Peluches"
+    }
 ]
