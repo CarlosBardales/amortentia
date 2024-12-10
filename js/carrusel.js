@@ -3,7 +3,7 @@ function inicializarCarrusel() {
     let currentIndex = 0;
     const carouselContainer = document.getElementById("destacados-carousel");
 
-    fetch("../data/prodestacados.json")
+    fetch("./data/prodestacados.json")
         .then(response => response.json())
         .then(items => {
             const totalItems = items.length;
