@@ -1,10 +1,10 @@
 [
     {
-        "id": "categoría1",
-        "nombre": "Categoría 1"
+        "id": "CAT01",
+        "nombre": "Flores"
     },
     {
-        "id": "categoría2",
+        "id": "CART02",
         "nombre": "Categoría 2"
     }
 ]

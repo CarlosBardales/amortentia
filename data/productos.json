@@ -1,42 +1,297 @@
 [
+
+    
     {
         "id": 1,
-        "nombre": "Ramo Astromelia - Lila",
-        "precio": 89.00,
-        "descripcion": "6 Rosas naturales color lila con astromelias y fino follaje. Incluye mensaje para tarjeta Oh Surprise.",
-        "imagen": "../img/productos/m1.jpg",
-        "imagen2": "../img/productos/m1-2.jpg",
-        "imagen3": "../img/productos/m1-3.jpg",
-        "categoria": "Flores"
+        "nombre": "Abridor Corona",
+        "precio": 8.00,
+        "precioOriginal": 10.00,
+        "descripcion": "Abridor en forma de corona, con etiqueta de agradecimiento, cuerda de cañamo y bolsa de organza blanca",
+        "imagen": "../img/productos/10.jpg",
+        "imagen2": "../img/productos/11.jpg",
+        "imagen3": "../img/productos/12.jpg",
+        "categoria": "Religioso"
     },
     {
         "id": 2,
-        "nombre": "Ramo Rosas - Rojo",
-        "precio": 120.00,
-        "descripcion": "12 Rosas rojas frescas con follaje verde y envoltura decorativa. Ideal para ocasiones románticas.",
-        "imagen": "../img/productos/m2.jpg",
-        "imagen2": "../img/productos/m2-2.jpg",
-        "imagen3": "../img/productos/m2-3.jpg",
-        "categoria": "Flores"
+        "nombre": "Dije de Cruz Hueco",
+        "precio": 3.00,
+        "precioOriginal": 5.00,
+        "descripcion": "10 pzas Colgantes De Cruz Hueca De Color Plata Para Pendientes, para proyectos de bricolaje, para Collar De Pulsera Y Cualquier Otro Accesorio",
+        "imagen": "../img/productos/13.jpg",
+        "imagen2": "../img/productos/14.jpg",
+        "imagen3": "../img/productos/15.jpg",
+        "categoria": "Bisuteria"
     },
     {
         "id": 3,
-        "nombre": "Caja de Chocolate Gourmet",
-        "precio": 150.00,
-        "descripcion": "Caja premium con una selección de chocolates gourmet. Perfecto para regalar en cualquier ocasión.",
-        "imagen": "../img/productos/m3.jpg",
-        "imagen2": "../img/productos/m3-2.jpg",
-        "imagen3": "../img/productos/m3-3.jpg",
-        "categoria": "Dulces"
+        "nombre": "Dije Cruz",
+        "precio": 2.50,
+        "precioOriginal": 4.00,
+        "descripcion": "1 Dije dorado en forma de cruz hueca",
+        "imagen": "../img/productos/16.jpg",
+        "imagen2": "../img/productos/17.jpg",
+        "imagen3": "../img/productos/18.jpg",
+        "categoria": "Bisuteria"
     },
     {
         "id": 4,
-        "nombre": "Peluche Grande",
+        "nombre": "Bolsa Algodón",
+        "precio": 15.00,
+        "precioOriginal": 20.00,
+        "descripcion": "10 pzs de Bolsa ajustable de algodón, Colores: Rosa, Lila y Celeste    Medida 8cm * 10cm ",
+        "imagen": "../img/productos/19.jpg",
+        "imagen2": "../img/productos/20.jpg",
+        "imagen3": "../img/productos/21.jpg",
+        "categoria": "Insumos"
+    },
+    {
+        "id": 5,
+        "nombre": "Bolsa Transparente 20*15",
+        "precio": 120.00,
+       
+        "descripcion": "Bolsa transparente con asa.",
+        "imagen": "../img/productos/24.jpg",
+        "imagen2": "../img/productos/23.jpg",
+        "imagen3": "../img/productos/22.jpg",
+        "categoria": "Insumos"
+    },
+    {
+        "id": 6,
+        "nombre": "ANgel",
+        "precio": 5.00,
+        "precioOriginal": 8.00,
+        "descripcion": "Dije en forma de angel, 3 colores diferentes",
+        "imagen": "../img/productos/25.jpg",
+        "imagen2": "../img/productos/26.jpg",
+        "imagen3": "../img/productos/27.jpg",
+        "categoria": "Bisuteria"
+    },
+    {
+        "id": 1007,
+        "nombre": "Corazón",
+        "precio": 10.00,
+        "precioOriginal": 12.00,
+        "descripcion": "10 Cuentas espaciadora en forma de corazón, chapada en oro de 18kg",
+        "imagen": "../img/productos/29.jpg",
+        "imagen2": "../img/productos/28.jpg",
+        "imagen3": "../img/productos/29.jpg",
+        "categoria": "Bisuteria"
+    },
+    {
+        "id": 8,
+        "nombre": "Bolsa de Regalo",
+        "precio": 25.00,
+        "precioOriginal": 120.00,
+        "descripcion": "Bolsa de regalo con asa y cinta de lazo rosada",
+        "imagen": "../img/productos/32.jpg",
+        "imagen2": "../img/productos/31.jpg",
+        "imagen3": "../img/productos/30.jpg",
+        "categoria": "Insumos"
+    },
+    {
+        "id": 9,
+        "nombre": "Bolsa",
+        "precio": 150.00,
+        "precioOriginal": 120.00,
+        "descripcion"   : "Medida 13cm * 18cm ",
+        "imagen": "../img/productos/33.jpg",
+        "imagen2": "../img/productos/34.jpg",
+        "imagen3": "../img/productos/35.jpg",
+        "categoria": "Insumos"
+    },
+    {
+        "id": 10,
+        "nombre": "Plumas Moradas",
         "precio": 250.00,
-        "descripcion": "Peluche de alta calidad con textura suave y detalles adorables. Un regalo ideal para sorprender.",
-        "imagen": "../img/productos/m4.jpg",
-        "imagen2": "../img/productos/m4-2.jpg",
-        "imagen3": "../img/productos/m4-3.jpg",
-        "categoria": "Regalos"
+        "precioOriginal": 120.00,
+        "descripcion": "100 Plumas moradas",
+        "imagen": "../img/productos/36.jpg",
+        "imagen2": "../img/productos/37.jpg",
+        "imagen3": "../img/productos/38.jpg",
+        "categoria": "Insumos"
+    }
+    ,
+    {
+        "id": 11,
+        "nombre": "Bolsa con lazo Rosado",
+        "precio": 8.00,
+        "precioOriginal": 10.00,
+        "descripcion": "Bolsa de regalo pavonada con lazo rosado. Medida 20cm * 17.5cm",
+        "imagen": "../img/productos/1.jpg",
+        "imagen2": "../img/productos/2.jpg",
+        "imagen3": "../img/productos/3.jpg",
+        "categoria": "Insumos"
+    }
+    ,
+    {
+        "id": 12,
+        "nombre": "Bolsa Pavonada PVC",
+        "precio": 5.00,
+        "precioOriginal": 7.00,
+        "descripcion": "Bolsa de regalo pavonada Medida: 15cm * 7cm ",
+        "imagen": "../img/productos/5.jpg",
+        "imagen2": "../img/productos/4.jpg",
+        "categoria": "Insumos"
+    }
+    ,
+    {
+        "id": 13,
+        "nombre": "Caja para recuerdo de Boda",
+        "precio": 18.00,
+        "precioOriginal": 20.00,
+        "descripcion": "12 Cajas para recuerdo de boda",
+        "imagen": "../img/productos/6.jpg",
+        "imagen2": "../img/productos/9.jpg",
+        "imagen3": "../img/productos/8.jpg",
+        "categoria": "Religioso"
+    }
+    ,
+    {
+        "id": 14,
+        "nombre": "Billas Doradas 4mm",
+        "precio": 4.00,
+        "precioOriginal": 4.00,
+        "descripcion": "Paquete de 100 Billas Doradas 4mm",
+        "imagen": "../img/productos/39.jpg",
+        "imagen2": "../img/productos/41.jpg",
+        "imagen3": "../img/productos/42.jpg",
+        "categoria": "Bisuteria"
+    }
+    ,
+    {
+        "id": 15,
+        "nombre": "Billas Plateadas 4mm",
+        "precio": 4.00,
+        "precioOriginal": 4,
+        "descripcion": "Paquete de 100 Billas Plateadas 4mm",
+        "imagen": "../img/productos/40.jpg",
+        "imagen2": "../img/productos/41.jpg",
+        "imagen3": "../img/productos/42.jpg",
+        "categoria": "Bisuteria"
+    }
+    ,
+    {
+        "id": 16,
+        "nombre": "Cruz de Acrilico",
+        "precio": 5.00,
+        "precioOriginal": 7,
+        "descripcion": "10 dijes de cruz de acrilico colores variados",
+        "imagen": "../img/productos/45.jpg",
+        "imagen2": "../img/productos/44.jpg",
+        "imagen3": "../img/productos/43.jpg",
+        "categoria": "Bisuteria"
+    }
+    ,
+    {
+        "id": 17,
+        "nombre": "Cuchara para Miel",
+        "precio": 10.00,
+        "precioOriginal": 12.00,
+        "descripcion": "10 Mini Cucharas de madera para miel",
+        "imagen": "../img/productos/46.jpg",
+        "imagen2": "../img/productos/47.jpg",
+        "imagen3": "../img/productos/48.jpg",
+        "categoria": "Insumos"
+    }
+    ,
+    {
+        "id": 18,
+        "nombre": "Anillos conectores 6mm",
+        "precio": 5.00,
+        "precioOriginal": 6.00,
+        "descripcion": "Paquete de 100 anillos conectores de acero inoxidable",
+        "imagen": "../img/productos/50.jpg",
+        "imagen2": "../img/productos/51.jpg",
+        "imagen3": "../img/productos/49.jpg",
+        "categoria": "Bisuteria"
+    }
+    ,
+    {
+        "id": 19,
+        "nombre": "Dije de Cruz Dorado Hueco",
+        "precio": 5.00,
+        "precioOriginal": 6.00,
+        "descripcion": "Paquete de 10 dijes de cruz dorado hueco",
+        "imagen": "../img/productos/52.jpg",
+        "imagen2": "../img/productos/53.jpg",
+        "imagen3": "../img/productos/54.jpg",
+        "categoria": "Bisuteria"
+    }
+    ,
+    {
+        "id": 20,
+        "nombre": "Bolsa Kraft Blanca",
+        "precio": 12.60,
+        "precioOriginal": 15.00,
+        "descripcion": "12 bolsas de papel kraft color blanca",
+        "imagen": "../img/productos/57.jpg",
+        "imagen2": "../img/productos/55.jpg",
+        "imagen3": "../img/productos/56.jpg",
+        "categoria": "Bisuteria"
+    } ,
+
+    {
+        "id": 21,
+        "nombre": "MiniJoyero con espejo",
+        "precio": 20.00,
+        "precioOriginal": 25.00,
+        "descripcion": "Estuche para aretes, collares y anillos. Disponible en rosado",
+        "imagen": "../img/productos/73.jpg",
+        "imagen2": "../img/productos/74.jpg",
+        "imagen3": "../img/productos/75.jpg",
+        "categoria": "Joyeros"
+    }
+    ,
+
+    {
+        "id": 22,
+        "nombre": "Joyero de Cuero PU",
+        "precio": 25.00,
+        "precioOriginal": 30.00,
+        "descripcion": "Estuche para aretes, collares y anillos. Disponible en turquesa, rosado y crema",
+        "imagen": "../img/productos/76.jpg",
+        "imagen2": "../img/productos/77.jpg",
+        "imagen3": "../img/productos/78.jpg",
+        "categoria": "Joyeros"
+    }
+,
+    {
+        "id": 23,
+        "nombre": "Llavero Cinamorrol",
+        "precio": 15.00,
+        "precioOriginal": 20.00,
+        "descripcion": "Disponible en celeste, lila y rosado",
+        "imagen": "../img/productos/79.jpg",
+        "imagen2": "../img/productos/80.jpg",
+        "imagen3": "../img/productos/81.jpg",
+        "categoria": "Llaveros"
+    }
+
+
+
+    ,
+    {
+        "id": 24,
+        "nombre": "Stich 55cm",
+        "precio": 99.00,
+        "precioOriginal": 120.00,
+        "descripcion": "Peluche Stich de 55 cm en material hipoalergénico",
+        "imagen": "../img/productos/P3.JPG",
+        "imagen2": "../img/productos/P1.jpg",
+        "imagen3": "../img/productos/P4.jpg",
+        "categoria": "Peluches"
+    }
+    ,
+    {
+        "id": 25,
+        "nombre": "Coneja 23cm",
+        "precio": 25.00,
+        "precioOriginal": 30.00,
+        "descripcion": "Coneja con orejas largas, 2 colores disponibles",
+        "imagen": "../img/productos/p5.JPG",
+        "imagen2": "../img/productos/p6.jpg",
+        "imagen3": "../img/productos/p7.jpg",
+        "categoria": "Peluches"
     }
 ]
