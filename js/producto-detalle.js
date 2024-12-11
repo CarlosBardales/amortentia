@@ -8,7 +8,6 @@ function cargarDetalleProducto() {
         // Actualizar información del producto en la página
         document.getElementById('imagen-principal').src = producto.imagen;
         document.getElementById('nombre-producto').textContent = producto.nombre;
-        document.getElementById('codigo-producto').textContent = `Código: ${producto.id}`;
         document.getElementById('precio-producto').textContent = `S/${producto.precio.toFixed(2)}`;
         document.getElementById('descripcion-producto').textContent = producto.descripcion;
 

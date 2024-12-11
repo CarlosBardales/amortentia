@@ -47,16 +47,6 @@ function mostrarCarritoDeCompras() {
     totalContainer.textContent = `Total: S/${total.toFixed(2)}`;  // Mostrar el total
 }
 
-/*
-// Eliminar producto del carrito
-function eliminarProducto(id) {
-    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    carrito = carrito.filter(item => item.id !== id);  // Eliminar el producto por ID
-    localStorage.setItem('carrito', JSON.stringify(carrito));  // Guardar el carrito actualizado
-    mostrarCarritoDeCompras();  // Volver a mostrar el carrito actualizado
-}
- */
-
 function eliminarProducto(id) {
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     
@@ -77,32 +67,6 @@ function eliminarProducto(id) {
     localStorage.setItem('carrito', JSON.stringify(carrito));
     mostrarCarritoDeCompras(); // Actualizar la vista del carrito
 }
-
-
-/*
-
-// Agregar más productos al carrito (actualizar cantidad)
-function agregarMasProducto(id) {
-    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-
-    const productoExistente = carrito.find(item => item.id === id);  // Buscar el producto en el carrito
-
-    if (productoExistente) {
-        // Si el producto ya existe, aumentar la cantidad
-        productoExistente.cantidad++;  
-    } else {
-        // Si no está en el carrito, agregarlo con cantidad 1
-        carrito.push({ id: id, cantidad: 1, mensajeTarjeta: '', turnoEntrega: '', fechaEntrega: '' });
-    }
-
-    // Guardar el carrito actualizado en localStorage
-    localStorage.setItem('carrito', JSON.stringify(carrito));
-    
-    // Llamar a la función para actualizar la vista
-    mostrarCarritoDeCompras();
-}
-
-*/
 
 
 function agregarMasProducto(id) {
