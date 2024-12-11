@@ -1,3 +1,14 @@
+:root {
+  --color-principal: #ff6f61;
+  --color-secundario: #b7e8e6;
+  --color-terciario: #ff9aa2;
+  --color-hover: #e74c3c;
+  --color-fondo: #f9f9f9;
+  --color-texto: #333;
+  --color-blanco: #ffffff;
+  --color-sombra: rgba(0, 0, 0, 0.1);
+}
+
 /* Estilo de las tarjetas de los productos */
 .producto {
     border: 1px solid #eee;
@@ -293,9 +304,15 @@ section .botones{
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 939px) {
     #productos-container {
         grid-template-columns: repeat(2, 1fr); /* 2 productos por fila */
+    }
+    #boton-vaciar,
+    #boton-pagar {
+      
+      width: 40%;  /* Ajusta el ancho del botón */
+     
     }
 }
 
@@ -320,5 +337,12 @@ section .botones{
     .producto button {
         font-size: 14px;
         padding: 8px 16px;
+    }
+
+    #boton-vaciar,
+    #boton-pagar {
+      
+      width: 50%;  /* Ajusta el ancho del botón */
+     
     }
 }

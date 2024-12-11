@@ -20,14 +20,18 @@
         </div>
     </div>
     <header>
-       
+        
         <nav>
+            <!-- Ícono del menú hamburguesa -->
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+            <!-- Enlaces de navegación -->
             <ul class="nav-links">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="productos.html">Productos</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
-         </nav>
+        </nav>
     </header>
     <main>
         <section id="carrito">
@@ -55,6 +59,13 @@
         <p>&copy; 2024 Amortentia Perú | Todos los derechos reservados</p>
     </footer>
     <script src="../js/carrito.js"></script>
-   
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.nav-links');
+            const icon = document.querySelector('.menu-icon');
+            menu.classList.toggle('active'); // Mostrar/Ocultar menú
+            icon.classList.toggle('active'); // Rotar el icono
+        }
+    </script>
 </body>
 </html>

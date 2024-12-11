@@ -29,16 +29,6 @@
 /* Barra de navegación */
 header nav {
   display: flex;
-  justify-content: space-between;  /* Alinea el logo, menú y carrito */
-  align-items: center;
-  padding: 15px 20px;
-  background-color: var(--color-terciario); /* Rosa vibrante */
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-/* Barra de navegación */
-header nav {
-  display: flex;
   justify-content: space-between;  /* Alinea el logo, el menú y el carrito */
   align-items: center;
   padding: 15px 20px;
@@ -150,33 +140,3 @@ header nav .nav-links.active {
       order: 1; /* Asegura que el carrito esté en la misma fila que el menú */
   }
 }
-
-
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  text-align: center;
-}
-
-nav ul li {
-  display: inline;
-  margin-right: 15px;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav ul li a:hover {
-  text-decoration: underline;
-}
-
-main {
-  padding: 1rem;
-}
-
-
-

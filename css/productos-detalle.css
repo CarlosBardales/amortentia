@@ -1,126 +1,164 @@
-
 /* Estilos para la página de detalle del producto */
 .detalle-info {
-    flex: 1;
-  }
-  
-  .detalle-info h2 {
-    font-size: 2.rem;
-    margin-bottom: 10px;
-  }
-  
-  .detalle-info p {
-    margin: 10px 0;
-  }
-  
-  .detalle-info .precio-producto{
-    font-weight: bold;
-    font-size: 2rem
-  }
-  
-  #form-personalizar label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-  }
-  
-  #form-personalizar input,
-  #form-personalizar textarea,
-  #form-personalizar select {
-    width: 100%;
-    margin: 5px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  #form-personalizar button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #ff6f61;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  #form-personalizar button:hover {
-    background: #0056b3;
-  }
-  
-  
-  
-  
-  /* Contenedor principal */
+  flex: 1;
+}
+
+.detalle-info h2 {
+  font-size: 2rem;  /* Cambio de 2.rem a 2rem para evitar error */
+  margin-bottom: 10px;
+}
+
+.detalle-info p {
+  margin: 10px 0;
+}
+
+.detalle-info .precio-producto {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+#form-personalizar label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#form-personalizar input,
+#form-personalizar textarea,
+#form-personalizar select {
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#form-personalizar button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#form-personalizar button:hover {
+  background:  #e74c3c;
+  ;
+}
+
+/* Contenedor principal */
+.detalle-producto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;  /* Cambié 'right' a 'center' para mejor alineación */
+  align-items: flex-start;
+  margin: 0 auto;
+}
+
+/* Imagen principal */
+.imagen-principal-container {
+  width: 100%; /* Ancho flexible para ajustarse al tamaño de pantalla */
+  max-width: 700px; /* Ancho máximo para que no se agrande más de lo necesario */
+  height: auto;  /* La altura será proporcional */
+  overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
+  display: flex;
+  justify-content: center; /* Centra la imagen horizontalmente */
+  align-items: center; /* Centra la imagen verticalmente */
+  margin: 0 auto; /* Centra el contenedor dentro de su contenedor padre */
+}
+
+#imagen-principal {
+  width: 100%;  /* La imagen ocupa el 100% del ancho del contenedor */
+  height: 100%; /* Asegura que la imagen también ocupe todo el alto del contenedor */
+  object-fit: cover; /* Mantiene la proporción de la imagen sin distorsionarla */
+  object-position: center; /* Centra la imagen si no cubre todo el contenedor */
+}
+
+/* Galería secundaria */
+.galeria-secundaria {
+  display: flex;
+  gap: 10px;
+  justify-content: left;  /* Cambié 'left' a 'center' para una mejor alineación */
+  flex-wrap: wrap;
+  margin-top: 2%;
+}
+
+.galeria-secundaria img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.3s, border 0.3s;
+  border-radius: 15px;
+}
+
+.galeria-secundaria img:hover {
+  transform: scale(1.1);
+  border: 2px solid #007bff;
+}
+
+/* Información del producto */
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 1024px) {
   .detalle-producto {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: right;
-      align-items: flex-start;
-      margin: 0 auto;
+      flex-direction: column;
+      align-items: center;
   }
-  
-  
-  
-  
-  /* Imagen principal */
-  
-  /* Estilo para la imagen principal */
+
   .imagen-principal-container {
-    width: 700px; /* Ancho fijo */
-    height: 600px; /* Alto fijo */
-    overflow: hidden; /* Ocultar cualquier parte de la imagen que sobrepase el contenedor */
-    display: flex;
-    justify-content: center; /* Centra la imagen en el contenedor */
-    align-items: center; /* Centra la imagen verticalmente */
+      max-width: 90%;  /* El ancho de la imagen se reduce aún más en pantallas medianas */
+      height: auto;
   }
-  
-  
-  #imagen-principal {
-     width: 100%;  /* Asegura que la imagen ocupe el 100% del contenedor */
-     height: 100%; /* Asegura que la imagen ocupe el 100% del contenedor */
-     object-fit: cover; /* Esto mantiene la proporción de la imagen sin distorsionarla */
-     object-position: center; /* Centra la imagen si no ocupa todo el contenedor */
-   }
-  
-  
-  
-  /* Galería secundaria */
+
+  .detalle-info {
+      text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .detalle-producto {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;  /* Reduce el espacio entre los elementos */
+  }
+
+  .detalle-info h2 {
+      font-size: 1.5rem;  /* Ajusta el tamaño del título */
+  }
+
+  .detalle-info .precio-producto {
+      font-size: 1.5rem;  /* Ajusta el tamaño del precio */
+  }
+
+  #form-personalizar button {
+      width: 100%;  /* El botón ocupará todo el ancho disponible */
+  }
+
   .galeria-secundaria {
-      display: flex;
-      gap: 10px;
-      justify-content: left;
-      flex-wrap: wrap;
-      margin-top: 2%;
-     
+      justify-content: center;  /* Centra las imágenes en pantallas más pequeñas */
   }
-  
+
   .galeria-secundaria img {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      cursor: pointer;
-      border: 2px solid transparent;
-      transition: transform 0.3s, border 0.3s;
-      border-radius: 15px;
+      width: 80px;  /* Ajusta el tamaño de las imágenes en la galería */
+      height: 80px;
   }
-  
-  .galeria-secundaria img:hover {
-      transform: scale(1.1);
-      border: 2px solid #007bff;
+}
+
+@media (max-width: 480px) {
+  .detalle-info h2 {
+      font-size: 1.2rem;  /* Ajusta aún más el tamaño del título */
   }
-  
-  /* Información del producto */
-  
-  @media (max-width: 768px) {
-      .detalle-producto {
-          flex-direction: column;
-          align-items: center;
-      }
-  
-      .detalle-info {
-          text-align: center;
-      }
+
+  .detalle-info .precio-producto {
+      font-size: 1.2rem;  /* Ajusta el precio */
   }
-  
+
+  #form-personalizar button {
+      padding: 8px 15px;  /* Reduce el tamaño del botón */
+  }
+}
