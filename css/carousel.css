@@ -1,6 +1,42 @@
-/* Estilo para el carrusel */
+/* Contenedor de indicadores */
+.carousel-indicators {
+    width: 80%; /* Alineado al ancho del carrusel */
+    max-width: 1200px;
+    margin: 0 auto; /* Centrar indicadores */
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center;
+    gap: 10px; /* Espacio entre los círculos */
+    margin-top: 0.5rem; /* Mover ligeramente hacia arriba para mayor proximidad al carrusel */
+    position: relative; /* Asegurar que estén bien posicionados debajo */
+    z-index: 2; /* Asegurar que estén por encima de otros elementos */
+}
+
+/* Estilo de los indicadores circulares */
+.indicator {
+    width: 15px;
+    height: 15px;
+    background-color: #ccc; /* Color por defecto */
+    border-radius: 50%; /* Hacerlos circulares */
+    cursor: pointer; /* Mostrar puntero */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Animación para hover y cambio de color */
+}
+
+/* Indicador activo */
+.indicator.active {
+    background-color: #ff6f91; /* Azul para el indicador activo */
+}
+
+/* Efecto hover en los indicadores */
+.indicator:hover {
+    transform: scale(1.2); /* Agrandar ligeramente el círculo */
+    background-color: #e64a70; /* Color más oscuro al pasar el mouse */
+}
+
+/* Responsividad del carrusel */
 #carousel-container {
     display: flex;
+    flex-direction: column; /* Indicadores debajo del carrusel */
     align-items: center;
     justify-content: center;
     gap: 1rem;
@@ -8,36 +44,39 @@
     width: 100%;
 }
 
+/* Carrusel */
 #destacados-carousel {
     width: 80%;
     max-width: 1200px;
-    height: 500px;
+    height: 500px; /* Altura para pantallas grandes */
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     margin: 0 auto;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
-.carousel-item {
-    text-align: center;
+/* Indicadores en pantallas pequeñas */
+@media (max-width: 768px) {
+    .carousel-indicators {
+        width: 90%; /* Ajustar ancho */
+        gap: 8px; /* Reducir espacio entre círculos */
+    }
+    .indicator {
+        width: 12px;
+        height: 12px; /* Indicadores más pequeños */
+    }
 }
 
-#carousel-prev, #carousel-next {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#carousel-prev:hover, #carousel-next:hover {
-    background-color: #0056b3;
-}
-
-#carousel-prev, #carousel-next {
-    font-size: 2rem;
-    line-height: 1;
+@media (max-width: 480px) {
+    .carousel-indicators {
+        width: 95%; /* Ocupan casi todo el ancho del carrusel */
+    }
+    .indicator {
+        width: 10px;
+        height: 10px; /* Indicadores más pequeños */
+    }
 }

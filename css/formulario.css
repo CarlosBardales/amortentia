@@ -1,0 +1,24 @@
+
+form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--color-blanco);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px var(--color-sombra);
+}
+form input[type="text"], form input[type="email"], form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+form button {
+    width: 100%;
+    background-color: var(--color-principal);
+    padding: 1rem;
+    font-size: 1rem;
+}
+

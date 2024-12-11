@@ -1,0 +1,126 @@
+
+/* Estilos para la página de detalle del producto */
+.detalle-info {
+    flex: 1;
+  }
+  
+  .detalle-info h2 {
+    font-size: 2.rem;
+    margin-bottom: 10px;
+  }
+  
+  .detalle-info p {
+    margin: 10px 0;
+  }
+  
+  .detalle-info .precio-producto{
+    font-weight: bold;
+    font-size: 2rem
+  }
+  
+  #form-personalizar label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  #form-personalizar input,
+  #form-personalizar textarea,
+  #form-personalizar select {
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #form-personalizar button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #form-personalizar button:hover {
+    background: #0056b3;
+  }
+  
+  
+  
+  
+  /* Contenedor principal */
+  .detalle-producto {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: right;
+      align-items: flex-start;
+      margin: 0 auto;
+  }
+  
+  
+  
+  
+  /* Imagen principal */
+  
+  /* Estilo para la imagen principal */
+  .imagen-principal-container {
+    width: 700px; /* Ancho fijo */
+    height: 600px; /* Alto fijo */
+    overflow: hidden; /* Ocultar cualquier parte de la imagen que sobrepase el contenedor */
+    display: flex;
+    justify-content: center; /* Centra la imagen en el contenedor */
+    align-items: center; /* Centra la imagen verticalmente */
+  }
+  
+  
+  #imagen-principal {
+     width: 100%;  /* Asegura que la imagen ocupe el 100% del contenedor */
+     height: 100%; /* Asegura que la imagen ocupe el 100% del contenedor */
+     object-fit: cover; /* Esto mantiene la proporción de la imagen sin distorsionarla */
+     object-position: center; /* Centra la imagen si no ocupa todo el contenedor */
+   }
+  
+  
+  
+  /* Galería secundaria */
+  .galeria-secundaria {
+      display: flex;
+      gap: 10px;
+      justify-content: left;
+      flex-wrap: wrap;
+      margin-top: 2%;
+     
+  }
+  
+  .galeria-secundaria img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: transform 0.3s, border 0.3s;
+      border-radius: 15px;
+  }
+  
+  .galeria-secundaria img:hover {
+      transform: scale(1.1);
+      border: 2px solid #007bff;
+  }
+  
+  /* Información del producto */
+  
+  @media (max-width: 768px) {
+      .detalle-producto {
+          flex-direction: column;
+          align-items: center;
+      }
+  
+      .detalle-info {
+          text-align: center;
+      }
+  }
+  
