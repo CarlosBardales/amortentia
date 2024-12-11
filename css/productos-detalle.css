@@ -1,6 +1,7 @@
 /* Estilos para la página de detalle del producto */
 .detalle-info {
   flex: 1;
+  margin: 25px
 }
 
 .detalle-info h2 {
