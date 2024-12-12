@@ -1,55 +1,171 @@
 [
+  {
+    "id": 1,
+    "nombre": "Gel Bioderma",
+    "precio": 89.0,
+    "precioOriginal": 109.0,
+    "descripcion": "1 Sensibio Gel Moussant 200 ml + bolsa 'Merry Christmas' + 1 chocolate mont blanc ",
 
-    
-    {
-        "id": 1,
-        "nombre": "Gel Bioderma",
-        "precio": 89.00,
-        "precioOriginal": 109.00,
-        "descripcion": "1 Sensibio Gel Moussant 200 ml + bolsa 'Merry Christmas' + 1 chocolate mont blanc ",
-        
-        "imagen": "../img/navidad/n1.png",
-        "imagen1": "../img/navidad/n2.png",
-        "imagen2": "../img/navidad/n3.png",
-        "imagen3": "../img/navidad/n4.png",
-        "categoria": "Religioso"
-    },
-    {
-        "id": 2,
-        "nombre": "Pack Navideño Oriflame",
-        "precio": 45.00,
-        "precioOriginal": 65.00,
-        "descripcion": "1 Baño de Burbujas con Cítricos y Especias de Invierno 300ml + 1 crema para manos 75ml + Bolsa de regalo 'Merry Christmas' ",
-        
-        "imagen": "../img/navidad/n5.png",
-        "imagen2": "../img/navidad/n6.png",
-        "imagen3": "../img/navidad/n7.png",
-        "categoria": "Religioso"
-    }
-    ,
-    {
-        "id": 3,
-        "nombre": " Set Kriska",
-        "precio": 49.90,
-        "precioOriginal": 70.00,
-        "descripcion": "1 desodorante corporal en spray 100 ml + 1 llavero arcoiris con dije de cruz + 1 bolsa 'Feliz Navidad'  ",
-        
-        "imagen": "../img/navidad/n9.png",
-        "imagen2": "../img/navidad/n10.png",
-        "imagen3": "../img/navidad/n11.png",
-        "categoria": "Religioso"
-    }
-    ,
-    {
-        "id": 4,
-        "nombre": " Set Homem Potence",
-        "precio": 99.90,
-        "precioOriginal": 139.00,
-        "descripcion": "1 perfume Homem Potence 100ml + 1 mini perfume Homem Potence 25ml + 1 bolsa 'Merry Christmas'  ",
-        
-        "imagen": "../img/navidad/n12.png",
-        "imagen2": "../img/navidad/n13.png",
-        "imagen3": "../img/navidad/n14.png",
-        "categoria": "Religioso"
-    }
+    "imagen": "../img/navidad/n1.png",
+    "imagen1": "../img/navidad/n2.png",
+    "imagen2": "../img/navidad/n3.png",
+    "imagen3": "../img/navidad/n4.png",
+    "categoria": "Navidad"
+  },
+  {
+    "id": 2,
+    "nombre": "Pack Navideño Oriflame",
+    "precio": 45.0,
+    "precioOriginal": 65.0,
+    "descripcion": "1 Baño de Burbujas con Cítricos y Especias de Invierno 300ml + 1 crema para manos 75ml + Bolsa de regalo 'Merry Christmas' ",
+
+    "imagen": "../img/navidad/n5.png",
+    "imagen2": "../img/navidad/n6.png",
+    "imagen3": "../img/navidad/n7.png",
+    "categoria": "Navidad"
+  },
+  {
+    "id": 3,
+    "nombre": " Set Kriska",
+    "precio": 49.9,
+    "precioOriginal": 70.0,
+    "descripcion": "1 desodorante corporal en spray 100 ml + 1 llavero arcoiris con dije de cruz + 1 bolsa 'Feliz Navidad'  ",
+
+    "imagen": "../img/navidad/n9.png",
+    "imagen2": "../img/navidad/n10.png",
+    "imagen3": "../img/navidad/n11.png",
+    "categoria": "Navidad"
+  },
+  {
+    "id": 4,
+    "nombre": " Set Homem Potence",
+    "precio": 99.9,
+    "precioOriginal": 139.0,
+    "descripcion": "1 perfume Homem Potence 100ml + 1 mini perfume Homem Potence 25ml + 1 bolsa 'Merry Christmas'  ",
+
+    "imagen": "../img/navidad/n12.png",
+    "imagen2": "../img/navidad/n13.png",
+    "imagen3": "../img/navidad/n14.png",
+    "categoria": "Navidad"
+  },
+  {
+    "id": 5,
+    "nombre": " Set Baño",
+    "precio": 34.9,
+    "precioOriginal": 65.0,
+    "descripcion": "1 gel de baño corporal 100g 'K' + 1 jabon Homem + 1 bolsa 'Feliz Navidad'  ",
+
+    "imagen": "../img/navidad/n15.png",
+    "imagen2": "../img/navidad/n16.png",
+    "imagen3": "../img/navidad/n17.png",
+    "categoria": "Navidad"
+  },
+  {
+    "id": 6,
+    "nombre": " Set Paz e Humor - Natura",
+    "precio": 44.9,
+    "precioOriginal": 80.0,
+    "descripcion": "1 mini colonia Paz e Humor 25ml + 1  jabón 90g + 1 bolsa 'Merry Christmas'  ",
+
+    "imagen": "../img/navidad/n18.png",
+    "imagen2": "../img/navidad/n19.png",
+    "imagen3": "../img/navidad/n20.png",
+    "categoria": "Navidad"
+  },
+  {
+    "id": 7,
+    "nombre": " Regalo Kaiak Urbe",
+    "precio": 79.9,
+    "precioOriginal": 119.0,
+    "descripcion": "1  colonia 100ml + 1  crema 2 en 1 para barba de 100ml+ 1 bolsa 'Merry Christmas'  ",
+
+    "imagen": "../img/navidad/n21.png",
+    "imagen2": "../img/navidad/n22.png",
+    "imagen3": "../img/navidad/n23.png",
+    "categoria": "Navidad"
+  },
+  {
+    "id": 8,
+    "nombre": " Regalo Cinnamoroll",
+    "precio": 34.9,
+    "precioOriginal": 50.0,
+    "descripcion": "1  llavero Cinnamoroll + 1  jabon tododia de Algodón 90g + 1 bolsa 'Merry Christmas'  ",
+
+    "imagen": "../img/navidad/n24.png",
+    "imagen2": "../img/navidad/n25.png",
+    "imagen3": "../img/navidad/n24.png",
+    "categoria": "Navidad"
+  },
+  {
+    "id": 9,
+    "nombre": " Regalo My Melody",
+    "precio": 44.9,
+    "precioOriginal": 65.0,
+    "descripcion": "1 llavero de peluche My Melody +  1 set de esponjas - Oriflame+ 1 bolsa 'Merry Christmas'  ",
+
+    "imagen": "../img/navidad/n26.png",
+    "imagen2": "../img/navidad/n27.png",
+    "imagen3": "../img/navidad/n26.png",
+    "categoria": "Navidad"
+  },
+  {
+    "id": 10,
+    "nombre": " Regalo Patito Lala Fan",
+    "precio": 34.9,
+    "precioOriginal": 50.0,
+    "descripcion": "1 llavero de peluche +  1 jabón tododia de Algodón 90g + 1 bolsa 'Merry Christmas'  ",
+
+    "imagen": "../img/navidad/n28.png",
+    "imagen2": "../img/navidad/n29.png",
+    "imagen3": "../img/navidad/n28.png",
+    "categoria": "Navidad"
+  },
+  {
+    "id": 11,
+    "nombre": " Regalo Patito Lala Fan 1",
+    "precio": 44.9,
+    "precioOriginal": 65.0,
+    "descripcion": "1 llavero de peluche +  1 crema de manos 75ml- Oriflame+ 1 bolsa 'Merry Christmas'  ",
+
+    "imagen": "../img/navidad/n30.png",
+    "imagen2": "../img/navidad/n31.png",
+    "imagen3": "../img/navidad/n32.png",
+    "categoria": "Navidad"
+  },
+  {
+    "id": 12,
+    "nombre": " Regalo Patita Lala Fan 2",
+    "precio": 44.9,
+    "precioOriginal": 65.0,
+    "descripcion": "1 llavero de peluche Patita con lazo +  1 crema de manos 75ml- Oriflame+ 1 bolsa 'Merry Christmas'  ",
+
+    "imagen": "../img/navidad/n33.png",
+    "imagen2": "../img/navidad/n34.png",
+    "imagen3": "../img/navidad/n35.png",
+    "categoria": "Navidad"
+  },
+  {
+    "id": 13,
+    "nombre": " Regalo Patita Lala Fan 3",
+    "precio": 44.9,
+    "precioOriginal": 65.0,
+    "descripcion": "1 llavero de peluche Patito con gorro +  1 crema de manos 75ml- Oriflame+ 1 bolsa 'Merry Christmas'  ",
+
+    "imagen": "../img/navidad/n36.png",
+    "imagen2": "../img/navidad/n37.png",
+    "imagen3": "../img/navidad/n38.png",
+    "categoria": "Navidad"
+  },
+  {
+    "id": 14,
+    "nombre": " Regalo Homem Essence - Natura",
+    "precio": 94.9,
+    "precioOriginal": 155.0,
+    "descripcion": "1 perfume Homem Essence 100ml + 5 chocolates + 1 bolsa 'Merry Christmas'  ",
+
+    "imagen": "../img/navidad/n39.png",
+    "imagen2": "../img/navidad/n40.png",
+    "imagen3": "../img/navidad/n39.png",
+    "categoria": "Navidad"
+  }
 ]
