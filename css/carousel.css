@@ -1,15 +1,15 @@
 /* Contenedor de indicadores */
 .carousel-indicators {
-    width: 80%; /* Alineado al ancho del carrusel */
+    width: 100%; /* Alineado al ancho del carrusel */
     max-width: 1200px;
     margin: 0 auto; /* Centrar indicadores */
     display: flex;
     justify-content: center; /* Centrar horizontalmente */
     align-items: center;
     gap: 10px; /* Espacio entre los círculos */
-    margin-top: 0.5rem; /* Mover ligeramente hacia arriba para mayor proximidad al carrusel */
     position: relative; /* Asegurar que estén bien posicionados debajo */
     z-index: 2; /* Asegurar que estén por encima de otros elementos */
+    flex-wrap: wrap; /* Permitir que los indicadores se ajusten a nuevas filas si es necesario */
 }
 
 /* Estilo de los indicadores circulares */
@@ -24,7 +24,7 @@
 
 /* Indicador activo */
 .indicator.active {
-    background-color: #ff6f91; /* Azul para el indicador activo */
+    background-color: #ff6f91; /* Color del indicador activo */
 }
 
 /* Efecto hover en los indicadores */
@@ -40,16 +40,16 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     width: 100%;
 }
 
 /* Carrusel */
 #destacados-carousel {
-    width: 80%;
-    max-width: 1200px;
-    height: 500px; /* Altura para pantallas grandes */
-    overflow: hidden;
+    width: 100%; /* El carrusel ocupa todo el ancho del contenedor */
+    max-width: 1200px; /* Limita el ancho máximo a 1200px */
+    max-height: 500px; /* Altura fija para pantallas grandes */
+    overflow: hidden; /* Evitar que el contenido se desborde */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,26 +57,36 @@
     margin: 0 auto;
     border-radius: 10px; /* Bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    object-fit: contain; /* Evita que la imagen se estire */
 }
 
 /* Indicadores en pantallas pequeñas */
 @media (max-width: 768px) {
     .carousel-indicators {
-        width: 90%; /* Ajustar ancho */
-        gap: 8px; /* Reducir espacio entre círculos */
+        width: 90%; /* Ajustar el ancho de los indicadores */
+        gap: 8px; /* Reducir espacio entre los círculos */
+        justify-content: center; /* Centrar los indicadores en pantallas más pequeñas */
     }
     .indicator {
-        width: 12px;
-        height: 12px; /* Indicadores más pequeños */
+        width: 10px;
+        height: 10px; /* Hacer los indicadores más pequeños */
+    }
+    #destacados-carousel {
+        width: 100%; /* Aseguramos que ocupe todo el ancho disponible */
+        max-width: 100%; /* Ajuste máximo al 100% */
     }
 }
 
 @media (max-width: 480px) {
     .carousel-indicators {
-        width: 95%; /* Ocupan casi todo el ancho del carrusel */
+        width: 95%; /* Los indicadores ocupan casi todo el ancho */
     }
     .indicator {
-        width: 10px;
-        height: 10px; /* Indicadores más pequeños */
+        width: 8px;
+        height: 0px; /* Indicadores aún más pequeños */
+    }
+    #destacados-carousel {
+        width: 100%; /* Aseguramos que ocupe todo el ancho disponible */
+        max-width: 100%; /* Ajuste máximo al 100% */
     }
 }
