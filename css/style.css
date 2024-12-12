@@ -205,17 +205,6 @@ form button {
   font-size: 1rem;
 }
 
-/* Estilo de la lista de deseos */
-#wishlist-items {
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 1rem;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
 /* Estilo del campo de búsqueda de productos */
 #search-bar {
   width: 100%;
@@ -229,7 +218,7 @@ form button {
 
 /* Footer */
 footer {
-  background-color: #333;
+  background-color: #b7e8e6;
   color: #fff;
   text-align: center;
   padding: 2rem 1rem;
@@ -662,10 +651,6 @@ nav ul li a:hover {
 }
 
 
-
-
-
-
 /* Estilo del carrito */
 #carrito-items {
   padding: 20px;
@@ -821,3 +806,130 @@ nav ul li a:hover {
   background-color: #d43f00;
 }
 
+
+
+/* Base Styles (para pantallas grandes) */
+
+/* Estilo general de la página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff6f91;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  margin-right: 20px;
+}
+
+.navbar a:hover {
+  background-color: #e74c3c;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin: 10px;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Formulario de contacto */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Botón */
+button {
+  background-color: #ff6f91;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e74c3c;
+}
+
+/* Media Queries (Responsividad) */
+
+/* Para pantallas medianas (tabletas) */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .product-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-card {
+      padding: 12px;
+      margin: 5px;
+  }
+
+  form {
+      padding: 10px;
+  }
+}
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+  .navbar {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .product-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .product-card {
+      padding: 10px;
+      margin: 5px;
+  }
+
+  button {
+      width: 100%;
+  }
+
+  form {
+      padding: 5px;
+  }
+}
