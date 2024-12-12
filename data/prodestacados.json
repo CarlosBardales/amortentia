@@ -2,38 +2,21 @@
     {
         "id": 1,
         "nombre": "Producto Destacado 1",
-        "imagen": "../img/prodes/prodes1.png"
+        "imagen": "../img/prodes/prodes1.jpg"
     },
     {
         "id": 2,
         "nombre": "Producto Destacado 2",
-        "imagen": "../img/prodes/prodes2.png"
+        "imagen": "../img/prodes/prodes2.jpg"
     },
     {
         "id": 3,
         "nombre": "Producto Destacado 3",
-        "imagen": "../img/prodes/prodes3.png"
+        "imagen": "../img/prodes/prodes3.jpg"
     },
     {
         "id": 4,
         "nombre": "Producto Destacado 4",
-        "imagen": "../img/prodes/prodes4.png"
-    }
-    ,
-    {
-        "id": 5,
-        "nombre": "Producto Destacado 5",
-        "imagen": "../img/prodes/prodes5.png"
-    },
-    {
-        "id": 6,
-        "nombre": "Producto Destacado 6",
-        "imagen": "../img/prodes/prodes6.png"
-    }
-    ,
-    {
-        "id": 7,
-        "nombre": "Producto Destacado 7",
-        "imagen": "../img/prodes/prodes7.png"
+        "imagen": "../img/prodes/prodes4.jpg"
     }
 ]

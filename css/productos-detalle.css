@@ -1,13 +1,12 @@
 /* Estilos para la página de detalle del producto */
 .detalle-info {
   flex: 1;
-  margin: 25px;
+  margin: 25px
 }
 
 .detalle-info h2 {
   font-size: 2rem;  /* Cambio de 2.rem a 2rem para evitar error */
   margin-bottom: 10px;
- 
 }
 
 .detalle-info p {

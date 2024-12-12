@@ -268,6 +268,8 @@
         "categoria": "Llaveros"
     }
 
+
+
     ,
     {
         "id": 24,
@@ -275,7 +277,7 @@
         "precio": 99.00,
         "precioOriginal": 120.00,
         "descripcion": "Peluche Stich de 55 cm en material hipoalergénico",
-        "imagen": "../img/productos/P3.jpg",
+        "imagen": "../img/productos/P3.JPG",
         "imagen2": "../img/productos/P1.jpg",
         "imagen3": "../img/productos/P4.jpg",
         "categoria": "Peluches"
@@ -283,6 +285,30 @@
     ,
     {
         "id": 25,
+        "nombre": "Coneja 23cm",
+        "precio": 25.00,
+        "precioOriginal": 30.00,
+        "descripcion": "Coneja con orejas largas, 2 colores disponibles",
+        "imagen": "../img/productos/p5.jpg",
+        "imagen2": "../img/productos/p6.jpg",
+        "imagen3": "../img/productos/p7.jpg",
+        "categoria": "Peluches"
+    }
+    ,
+    {
+        "id": 26,
+        "nombre": "Coneja 23cm",
+        "precio": 25.00,
+        "precioOriginal": 30.00,
+        "descripcion": "Coneja con orejas largas, 2 colores disponibles",
+        "imagen": "../img/productos/p5.jpg",
+        "imagen2": "../img/productos/p6.jpg",
+        "imagen3": "../img/productos/p7.jpg",
+        "categoria": "Peluches"
+    }
+    ,
+    {
+        "id": 27,
         "nombre": "Coneja 23cm",
         "precio": 25.00,
         "precioOriginal": 30.00,
