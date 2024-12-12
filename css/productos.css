@@ -11,312 +11,338 @@
 
 /* Estilo de las tarjetas de los productos */
 .producto {
-  border: 1px solid #eee;
-  padding: 0.5rem;
-  margin: 0.1rem;
-  background-color: #ffffff;
-  border-radius: 15px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease-in-out;
-}
+    border: 1px solid #eee;
+    padding: 0.5rem;
+    margin: 0.1rem;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
 
-#productos-container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 4 productos por fila */
-  gap: 20px; /* Espacio entre productos */
-  padding: 20px;
-}
-
-/* Producto individual */
-.producto img {
-  max-width: 100%;
-  max-height: auto; /* Limitar el alto máximo de la imagen */
-  height: auto; /* Mantener la proporción */
-  border-radius: 15px;
-}
-
-.producto h3 {
-  font-size: 1rem;
-  margin-bottom: 10px;
-}
-
-.producto p {
-  font-size: 0.8rem;
-  color: #666;
-  margin-bottom: 1rem;
-  position: static;
-}
-
-.producto:hover {
-  transform: translateY(-5px); /* Efecto hover para los productos */
-}
-
-.producto .precio {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.producto .precio .original {
-  text-decoration: line-through;
-  color: #888;
-}
-
-.producto .precio .promocion {
-  color: #e74c3c; /* Rojo para el precio promocional */
-}
-
-.producto button {
-  background-color: #ee8379; /* Naranja cálido */
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.producto button:hover {
-  background-color: #d85c4f;
-}
-
-button {
-  background-color: #ff6f61; /* Naranja cálido para botones */
-  color: #fff;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #d85c4f; /* Naranja oscuro para hover */
-}
-
-/* Botón "Añadir al carrito" */
-.producto button {
-  background-color: #3498db;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.producto button:hover {
-  background-color: #2980b9;
-}
-
-/* DETALLE DEL PRODUCTO */
-
-/* Estilo del formulario de contacto y checkout */
-form {
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-form input[type="text"],
-form input[type="email"],
-form textarea {
-  width: 100%;
-  padding: 0.75rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-form button {
-  width: 100%;
-  background-color: #ff6f61; /* Naranja cálido */
-  padding: 1rem;
-  font-size: 1rem;
-}
-
-/* Estilo para el ícono del carrito */
-.cart-icon {
-  position: relative;
-  color: white;
-  font-size: 1.5rem;
-  text-decoration: none;
-}
-
-.cart-icon #cart-count {
-  position: absolute;
-  top: -5px;
-  right: -10px;
-  background: red;
-  color: white;
-  border-radius: 50%;
-  padding: 2px 6px;
-  font-size: 0.8rem;
-  font-weight: bold;
-  display: none;
-}
-
-/* Estilo del carrito */
-#carrito-items {
-  padding: 20px;
-  list-style-type: none;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-}
-
-.producto-carrito {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  margin-bottom: 15px;
-  border-bottom: 1px solid #ddd;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.producto-carrito img {
-  max-width: 80px;
-  height: auto;
-  border-radius: 5px;
-}
-
-.producto-carrito div {
-  flex: 1;
-  padding-left: 10px;
-}
-
-.producto-carrito h3 {
-  font-size: 1.1rem;
-  color: #333;
-}
-
-.producto-carrito p {
-  font-size: 0.9rem;
-  color: #666;
-}
-
-.producto-carrito .acciones {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.producto-carrito .acciones button {
-  background-color: #e74c3c;
-  color: white;
-  padding: 5px 10px;
-  font-size: 0.9rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.producto-carrito .acciones button:hover {
-  background-color: #c0392b;
-}
-
-/* Botón de Vaciar Carrito */
-
-section .botones {
-  text-align: center; /* Centra el contenido dentro del contenedor */
-}
-
-#boton-vaciar,
-#boton-pagar {
-  color: white;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  width: 20%; /* Ajusta el ancho del botón */
-  display: block; /* Hace que el botón sea un bloque para que pueda centrarse */
-  margin: 10px auto; /* Aplica un margen automático para centrar el botón */
-  background-color: #ff9aa2;
-}
-
-/* Total del carrito */
-#total {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-top: 20px;
-}
-
-/* Estilos para el contenedor de cantidad */
-.cantidad-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-/* Estilos para el contenedor de cantidad */
-.cantidad-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin-top: 10px;
-  padding: 5px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  background-color: #f9f9f9;
-}
-
-/* Media Queries para hacer que los productos sean responsivos */
-@media (max-width: 1200px) {
   #productos-container {
+    display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 productos por fila */
+    gap: 20px; /* Espacio entre productos */
+    padding: 20px;
   }
-}
-
-@media (max-width: 939px) {
-  #productos-container {
-    grid-template-columns: repeat(3, 1fr); /* 3 productos por fila */
+  
+ /* Producto individual */
+.producto img {
+    max-width: 100%;
+    max-height: 300px; /* Limitar el alto máximo de la imagen */
+    height: auto; /* Mantener la proporción */
+    border-radius: 15px;
   }
-  #boton-vaciar,
-  #boton-pagar {
-    width: 40%; /* Ajusta el ancho del botón */
-  }
-}
-
-@media (max-width: 600px) {
-  #productos-container {
-    grid-template-columns: repeat(2, 1fr); /* 1 producto por fila */
-    padding: 10px;
-  }
-
+  
   .producto h3 {
-    font-size: 0.9rem;
+   font-size: 1rem ;
+   margin-bottom: 10px;
+  }
+  
+  .producto p {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 1rem;
+    position: static;
   }
 
-  .producto p {
-    font-size: 0.7rem;
+  .producto:hover {
+    transform: translateY(-5px); /* Efecto hover para los productos */
   }
+ 
 
   .producto .precio {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  
+.producto .precio .original {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  .producto .precio .promocion {
+    color: #e74c3c; /* Rojo para el precio promocional */
+  }
+  
+  .producto button {
+    background-color: #ee8379;  /* Naranja cálido */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .producto button:hover {
+    background-color: #d85c4f;
+  }
+
+  button {
+    background-color: #ff6f61;  /* Naranja cálido para botones */
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #d85c4f;  /* Naranja oscuro para hover */
+  }
+  
+ /* Botón "Añadir al carrito" */
+.producto button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .producto button:hover {
+    background-color: #2980b9;
+  }
+  
+  
+
+
+
+
+
+  /* DETALLE DEL PRODUCTO */
+  
+
+  /* Estilo del formulario de contacto y checkout */
+form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  form input[type="text"],
+  form input[type="email"],
+  form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form button {
+    width: 100%;
+    background-color: #ff6f61;  /* Naranja cálido */
+    padding: 1rem;
     font-size: 1rem;
   }
 
-  .producto button {
-    font-size: 14px;
-    padding: 8px 16px;
+
+  
+/* Estilo para el ícono del carrito */
+.cart-icon {
+    position: relative;
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+  
+  .cart-icon #cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: none;
+  }
+  
+ 
+
+  /* Estilo del carrito */
+#carrito-items {
+    padding: 20px;
+    list-style-type: none;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+  }
+  
+  .producto-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .producto-carrito img {
+    max-width: 80px;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .producto-carrito div {
+    flex: 1;
+    padding-left: 10px;
+  }
+  
+  .producto-carrito h3 {
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .producto-carrito p {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .producto-carrito .acciones {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .producto-carrito .acciones button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .producto-carrito .acciones button:hover {
+    background-color: #c0392b;
   }
 
+
+
+  
+/* Botón de Vaciar Carrito */
+
+section .botones{
+    text-align: center;  /* Centra el contenido dentro del contenedor */
+  }
+  
   #boton-vaciar,
   #boton-pagar {
-    width: 50%; /* Ajusta el ancho del botón */
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 20%;  /* Ajusta el ancho del botón */
+    display: block;  /* Hace que el botón sea un bloque para que pueda centrarse */
+    margin: 10px auto;  /* Aplica un margen automático para centrar el botón */
+    background-color:  #ff9aa2;
   }
+
+  
+  /* Total del carrito */
+  #total {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+ 
+  
+  /* Estilos para el contenedor de cantidad */
+  .cantidad-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  
+  /* Estilos para el contenedor de cantidad */
+  .cantidad-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+  }
+  
+  
+  
+ /* Media Queries para hacer que los productos sean responsivos */
+@media (max-width: 1200px) {
+    #productos-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 productos por fila */
+    }
+}
+
+@media (max-width: 939px) {
+    #productos-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 productos por fila */
+    }
+    #boton-vaciar,
+    #boton-pagar {
+      
+      width: 40%;  /* Ajusta el ancho del botón */
+     
+    }
+}
+
+@media (max-width: 600px) {
+    #productos-container {
+        grid-template-columns: 1fr; /* 1 producto por fila */
+        padding: 10px;
+    }
+
+    .producto h3 {
+        font-size: 0.9rem;
+    }
+
+    .producto p {
+        font-size: 0.7rem;
+    }
+
+    .producto .precio {
+        font-size: 1rem;
+    }
+
+    .producto button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    #boton-vaciar,
+    #boton-pagar {
+      
+      width: 50%;  /* Ajusta el ancho del botón */
+     
+    }
 }
