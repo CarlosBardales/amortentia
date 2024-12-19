@@ -1,6 +1,4 @@
 [
-
-    
     {
         "id": 1,
         "nombre": "Abridor Corona",
@@ -49,7 +47,6 @@
         "id": 5,
         "nombre": "Bolsa Transparente 20*15",
         "precio": 120.00,
-       
         "descripcion": "Bolsa transparente con asa.",
         "imagen": "../img/productos/24.jpg",
         "imagen2": "../img/productos/23.jpg",
@@ -94,7 +91,7 @@
         "nombre": "Bolsa",
         "precio": 150.00,
         "precioOriginal": 120.00,
-        "descripcion"   : "Medida 13cm * 18cm ",
+        "descripcion": "Medida 13cm * 18cm ",
         "imagen": "../img/productos/33.jpg",
         "imagen2": "../img/productos/34.jpg",
         "imagen3": "../img/productos/35.jpg",
@@ -110,8 +107,7 @@
         "imagen2": "../img/productos/37.jpg",
         "imagen3": "../img/productos/38.jpg",
         "categoria": "Insumos"
-    }
-    ,
+    },
     {
         "id": 11,
         "nombre": "Bolsa con lazo Rosado",
@@ -122,8 +118,7 @@
         "imagen2": "../img/productos/2.jpg",
         "imagen3": "../img/productos/3.jpg",
         "categoria": "Insumos"
-    }
-    ,
+    },
     {
         "id": 12,
         "nombre": "Bolsa Pavonada PVC",
@@ -133,8 +128,7 @@
         "imagen": "../img/productos/5.jpg",
         "imagen2": "../img/productos/4.jpg",
         "categoria": "Insumos"
-    }
-    ,
+    },
     {
         "id": 13,
         "nombre": "Caja para recuerdo de Boda",
@@ -145,8 +139,7 @@
         "imagen2": "../img/productos/9.jpg",
         "imagen3": "../img/productos/8.jpg",
         "categoria": "Religioso"
-    }
-    ,
+    },
     {
         "id": 14,
         "nombre": "Billas Doradas 4mm",
@@ -157,8 +150,7 @@
         "imagen2": "../img/productos/41.jpg",
         "imagen3": "../img/productos/42.jpg",
         "categoria": "Bisuteria"
-    }
-    ,
+    },
     {
         "id": 15,
         "nombre": "Billas Plateadas 4mm",
@@ -169,8 +161,7 @@
         "imagen2": "../img/productos/41.jpg",
         "imagen3": "../img/productos/42.jpg",
         "categoria": "Bisuteria"
-    }
-    ,
+    },
     {
         "id": 16,
         "nombre": "Cruz de Acrilico",
@@ -181,8 +172,7 @@
         "imagen2": "../img/productos/44.jpg",
         "imagen3": "../img/productos/43.jpg",
         "categoria": "Bisuteria"
-    }
-    ,
+    },
     {
         "id": 17,
         "nombre": "Cuchara para Miel",
@@ -193,8 +183,7 @@
         "imagen2": "../img/productos/47.jpg",
         "imagen3": "../img/productos/48.jpg",
         "categoria": "Insumos"
-    }
-    ,
+    },
     {
         "id": 18,
         "nombre": "Anillos conectores 6mm",
@@ -205,8 +194,7 @@
         "imagen2": "../img/productos/51.jpg",
         "imagen3": "../img/productos/49.jpg",
         "categoria": "Bisuteria"
-    }
-    ,
+    },
     {
         "id": 19,
         "nombre": "Dije de Cruz Dorado Hueco",
@@ -217,8 +205,7 @@
         "imagen2": "../img/productos/53.jpg",
         "imagen3": "../img/productos/54.jpg",
         "categoria": "Bisuteria"
-    }
-    ,
+    },
     {
         "id": 20,
         "nombre": "Bolsa Kraft Blanca",
@@ -229,8 +216,7 @@
         "imagen2": "../img/productos/55.jpg",
         "imagen3": "../img/productos/56.jpg",
         "categoria": "Bisuteria"
-    } ,
-
+    },
     {
         "id": 21,
         "nombre": "MiniJoyero con espejo",
@@ -241,9 +227,7 @@
         "imagen2": "../img/productos/74.jpg",
         "imagen3": "../img/productos/75.jpg",
         "categoria": "Joyeros"
-    }
-    ,
-
+    },
     {
         "id": 22,
         "nombre": "Joyero de Cuero PU",
@@ -254,8 +238,7 @@
         "imagen2": "../img/productos/77.jpg",
         "imagen3": "../img/productos/78.jpg",
         "categoria": "Joyeros"
-    }
-,
+    },
     {
         "id": 23,
         "nombre": "Llavero Cinamorrol",
@@ -266,9 +249,7 @@
         "imagen2": "../img/productos/80.jpg",
         "imagen3": "../img/productos/81.jpg",
         "categoria": "Llaveros"
-    }
-
-    ,
+    },
     {
         "id": 24,
         "nombre": "Stich 55cm",
@@ -279,8 +260,7 @@
         "imagen2": "../img/productos/P1.jpg",
         "imagen3": "../img/productos/P4.jpg",
         "categoria": "Peluches"
-    }
-    ,
+    },
     {
         "id": 25,
         "nombre": "Coneja 23cm",

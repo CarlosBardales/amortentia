@@ -36,8 +36,8 @@ async function cargarProductos() {
             <h3>${producto.nombre}</h3>
             <div class="precio">
                 <span class="original">S/${producto.precioOriginal.toFixed(
-                  2
-                )}</span>
+          2
+        )}</span>
                 <span class="promocion">S/${producto.precio.toFixed(2)}</span>
             </div>
         `;
@@ -70,6 +70,19 @@ function actualizarContadorCarrito() {
       );
     }
   });
+}
+// Actualizar el contador del carrito
+function actualizarContadorCarrito() {
+  const carrito = JSON.parse(localStorage.getItem('carrito')) || {};
+  const contador = document.getElementById('cart-count');
+  if (contador) {
+    if (carrito.length > 0) {
+      contador.style.display = 'inline';
+      contador.textContent = carrito.length; // Mostrar la cantidad de productos
+    } else {
+      contador.style.display = 'none'; // Ocultar si no hay productos
+    }
+  }
 }
 
 // Redirigir al detalle del producto

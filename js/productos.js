@@ -13,14 +13,14 @@ async function cargarProductos() {
         productos.forEach(producto => {
             const div = document.createElement('div');
             div.classList.add('producto');
-            
+
             // Agregar un evento al contenedor para redirigir al detalle del producto
             div.addEventListener('click', () => {
                 verDetalleProducto(producto.id); // Llamar a la función para redirigir
             });
 
-           if(producto.precioOriginal==null){
-            div.innerHTML = `
+            if (producto.precioOriginal == null) {
+                div.innerHTML = `
             <img src="${producto.imagen}" 
                  alt="${producto.nombre}"  
                  style="cursor: pointer;">
@@ -30,8 +30,8 @@ async function cargarProductos() {
             </div>
         `;
 
-           }else{
-            div.innerHTML = `
+            } else {
+                div.innerHTML = `
             <img src="${producto.imagen}" 
                  alt="${producto.nombre}"  
                  style="cursor: pointer;">
@@ -40,8 +40,8 @@ async function cargarProductos() {
                 <span class="original">S/${producto.precioOriginal.toFixed(2)}</span>
                 <span class="promocion">S/${producto.precio.toFixed(2)}</span>
             </div>
-        `; 
-           }
+        `;
+            }
 
             contenedor.appendChild(div);
         });
@@ -56,7 +56,7 @@ function actualizarContadorCarrito() {
     document.addEventListener('DOMContentLoaded', () => {
         const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
         const contador = document.getElementById('cart-count'); // Obtener el elemento del contador
-        
+
         // Verificar si el contador existe en el DOM
         if (contador) {
             if (carrito.length > 0) {
@@ -71,6 +71,19 @@ function actualizarContadorCarrito() {
     });
 }
 
+// Actualizar el contador del carrito
+function actualizarContadorCarrito() {
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || {};
+    const contador = document.getElementById('cart-count');
+    if (contador) {
+        if (carrito.length > 0) {
+            contador.style.display = 'inline';
+            contador.textContent = carrito.length; // Mostrar la cantidad de productos
+        } else {
+            contador.style.display = 'none'; // Ocultar si no hay productos
+        }
+    }
+}
 
 // Redirigir al detalle del producto
 function verDetalleProducto(productId) {
