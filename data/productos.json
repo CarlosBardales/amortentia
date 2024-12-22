@@ -267,9 +267,9 @@
         "precio": 25.00,
         "precioOriginal": 30.00,
         "descripcion": "Coneja con orejas largas, 2 colores disponibles",
-        "imagen": "../img/productos/p5.webp",
-        "imagen2": "../img/productos/p6.webp",
-        "imagen3": "../img/productos/p7.webp",
+        "imagen": "../img/productos/P5.webp",
+        "imagen2": "../img/productos/P6.webp",
+        "imagen3": "../img/productos/P7.webp",
         "categoria": "Peluches"
     }
 ]
