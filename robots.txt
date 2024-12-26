@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /js
+Disallow: /data 
+
+
+Sitemap: https://amortentia-one.vercel.app/sitemap.xml
