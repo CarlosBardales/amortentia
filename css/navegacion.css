@@ -20,8 +20,9 @@
 }
 
 .header-bar .logo img {
-  height: 150px; /* Ajustar tamaño del logo */
+  height: 120px; /* Ajustar tamaño del logo */
   width: auto;
+  margin-top: 15px;
 }
 
 /* Barra de navegación */
@@ -136,5 +137,10 @@ header nav .nav-links.active {
   /* Asegurar que el carrito se quede al lado del menú en móviles */
   header nav .cart-icon {
     order: 1; /* Asegura que el carrito esté en la misma fila que el menú */
+  }
+  .header-bar .logo img {
+    height: 40px; /* Ajustar tamaño del logo */
+    width: auto;
+    margin-top: 15px;
   }
 }
