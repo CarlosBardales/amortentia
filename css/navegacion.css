@@ -429,6 +429,11 @@ header .nav-links.active {
     background-color: #ff9aa2;
     transition: all 0.3s ease;
     z-index: 999;
+    display: flex;
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
   }
 
   .sidebar.open {
@@ -440,7 +445,15 @@ header .nav-links.active {
   .sidebar.open .nav-links {
     display: flex;
     flex-direction: column;
+    /* Alinea los enlaces verticalmente */
     padding-top: 20px;
+    align-items: center;
+    /* Centra los enlaces horizontalmente */
+    justify-content: center;
+    /* Asegura que los elementos se alineen centrados */
+    height: 100%;
+    /* Asegura que los enlaces ocupen toda la altura de la barra lateral */
+
   }
 
   .sidebar {
@@ -460,6 +473,10 @@ header .nav-links.active {
 
   .sidebar .nav-links a {
     font-size: 18px;
+    text-align: center;
+    /* Asegura que el texto dentro de los enlaces esté centrado */
+    padding: 10px;
+
   }
 }
 
