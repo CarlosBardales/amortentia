@@ -1,129 +1,127 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Descubre Amortentia Regalos, la tienda online de regalos personalizados y únicos para cada ocasión."
-    />
 
-    <link rel="stylesheet" href="../css/estructura.css" />
-    <link rel="stylesheet" href="../css/navegacion.css" />
-    <link rel="stylesheet" href="../css/productos-detalle.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Descubre Amortentia Regalos, la tienda online de regalos personalizados y únicos para cada ocasión." />
 
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <title>Detalle del Producto</title>
-  </head>
-  <body>
+  <link rel="stylesheet" href="../css/estructura.css" />
+  <link rel="stylesheet" href="../css/navegacion.css" />
+  <link rel="stylesheet" href="../css/productos-detalle.css" />
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  <title>Detalle del Producto</title>
+</head>
+
+<body>
+
+  <header class="header">
+
     <!-- Barra Superior -->
-    <div class="header-bar">
+    <div class="header-logo">
       <div class="logo">
-        <img src="../img/icons/logo.png" alt="Logo de Amortentia Regalos" />
+        <img src="../img/icons/logo.png" alt="Logo de Amortentia Regalos">
       </div>
     </div>
 
-    <header>
-      <nav>
-        <!-- Ícono del menú hamburguesa -->
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="nav">
+      <!-- Ícono de menú hamburguesa (aparece solo en pantallas pequeñas) -->
+      <div class="menu-icon" onclick="toggleMenu()">
+        <i class='bx bx-menu' id="btn"></i>
+      </div>
 
-        <!-- Enlaces de navegación -->
+      <div class="sidebar">
         <ul class="nav-links">
           <li><a href="../index.html">Inicio</a></li>
-          <li><a href="productos.html">Productos</a></li>
-          <li><a href="creligiosas.html"> Ceremonias Religiosas</a></li>
-          <li><a href="navidad.html">Navidad</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="../pages/productos.html">Productos</a></li>
+          <li><a href="../pages/creligiosas.html"> Ceremonias Religiosas</a></li>
+          <li><a href="../pages/navidad.html">Navidad</a></li>
+          <li><a href="../pages/contacto.html">Contacto</a></li>
         </ul>
+      </div>
 
-        <!-- Ícono del carrito -->
+      <!-- Ícono del carrito -->
+
+      <div class="position-cart">
         <a href="carrito.html" class="cart-icon">
           <i class="fas fa-shopping-cart"></i>
           <span id="cart-count" style="display: none">0</span>
           <!-- Aquí se muestra el número de productos -->
         </a>
-      </nav>
-    </header>
-    <main>
-      <div class="detalle-producto">
-        <!-- Contenedor de la imagen principal -->
-        <div>
-          <div class="imagen-principal-container">
-            <img
-              id="imagen-principal"
-              src=""
-              alt="Imagen principal del producto"
-            />
-          </div>
-          <!-- Galería de imágenes -->
-          <div id="galeria-imagenes" class="galeria-secundaria"></div>
-        </div>
-
-        <!-- Información del producto -->
-        <div class="detalle-info">
-          <h2 id="nombre-producto"></h2>
-          <p id="codigo-producto"></p>
-          <p id="precio-producto" class="precio-producto"></p>
-          <p id="descripcion-producto"></p>
-
-          <!--  <label for="cantidad">Cantidad:</label> -->
-          <!-- Formulario de personalización -->
-          <form id="form-personalizar">
-            <label for="turno-entrega">Turno de entrega</label>
-            <select id="turno-entrega">
-              <option>Mañana - 9:00 am a 1:30 pm</option>
-              <option>Tarde - 2:00 pm a 6:00 pm</option>
-            </select>
-
-            <label for="fecha-entrega">Fecha de entrega</label>
-            <input type="date" id="fecha-entrega" />
-
-            <label for="mensaje-tarjeta">Mensaje para la tarjeta</label>
-            <textarea id="mensaje-tarjeta" maxlength="240"></textarea>
-
-            <label for="cantidad">Cantidad</label>
-            <input
-              type="number"
-              id="cantidad"
-              name="cantidad"
-              min="1"
-              value="1"
-              required
-            />
-
-            <button type="button" id="agregar-carrito">
-              Añadir al carrito
-            </button>
-          </form>
-        </div>
       </div>
-    </main>
-    <footer>
-      <nav>
-        <ul>
-          <li><a href="#">Preguntas frecuentes</a></li>
-          <li><a href="#">Políticas de Privacidad</a></li>
-          <li><a href="#">Términos y Condiciones</a></li>
-          <li><a href="#">Contáctanos</a></li>
-          <li><a href="#">Prensa</a></li>
-        </ul>
-      </nav>
-      <p>RUC: 10702396838 | Amortentia Regalos</p>
-      <p>&copy; 2024 Amortentia Perú | Todos los derechos reservados</p>
-    </footer>
-    <script src="../js/producto-detalle.js"></script>
-    <!-- Script para activar el menú hamburguesa -->
-    <script>
-      function toggleMenu() {
-        const menu = document.querySelector(".nav-links");
-        const icon = document.querySelector(".menu-icon");
-        menu.classList.toggle("active"); // Mostrar/Ocultar menú
-        icon.classList.toggle("active"); // Rotar el icono
-      }
-    </script>
-  </body>
+
+    </div>
+
+  </header>
+
+  <main>
+    <div class="detalle-producto">
+      <!-- Contenedor de la imagen principal -->
+      <div>
+        <div class="imagen-principal-container">
+          <img id="imagen-principal" src="" alt="Imagen principal del producto" />
+        </div>
+        <!-- Galería de imágenes -->
+        <div id="galeria-imagenes" class="galeria-secundaria"></div>
+      </div>
+
+      <!-- Información del producto -->
+      <div class="detalle-info">
+        <h2 id="nombre-producto"></h2>
+        <p id="codigo-producto"></p>
+        <p id="precio-producto" class="precio-producto"></p>
+        <p id="descripcion-producto"></p>
+
+        <!--  <label for="cantidad">Cantidad:</label> -->
+        <!-- Formulario de personalización -->
+        <form id="form-personalizar">
+          <label for="turno-entrega">Turno de entrega</label>
+          <select id="turno-entrega">
+            <option>Mañana - 9:00 am a 1:30 pm</option>
+            <option>Tarde - 2:00 pm a 6:00 pm</option>
+          </select>
+
+          <label for="fecha-entrega">Fecha de entrega</label>
+          <input type="date" id="fecha-entrega" />
+
+          <label for="mensaje-tarjeta">Mensaje para la tarjeta</label>
+          <textarea id="mensaje-tarjeta" maxlength="240"></textarea>
+
+          <label for="cantidad">Cantidad</label>
+          <input type="number" id="cantidad" name="cantidad" min="1" value="1" required />
+
+          <button type="button" id="agregar-carrito">
+            Añadir al carrito
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="#">Preguntas frecuentes</a></li>
+        <li><a href="#">Políticas de Privacidad</a></li>
+        <li><a href="#">Términos y Condiciones</a></li>
+        <li><a href="#">Contáctanos</a></li>
+        <li><a href="#">Prensa</a></li>
+      </ul>
+    </nav>
+    <p>RUC: 10702396838 | Amortentia Regalos</p>
+    <p>&copy; 2024 Amortentia Perú | Todos los derechos reservados</p>
+  </footer>
+  <script src="../js/producto-detalle.js"></script>
+  <!-- Script para activar el menú hamburguesa -->
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector(".nav-links");
+      const icon = document.querySelector(".menu-icon");
+      menu.classList.toggle("active"); // Mostrar/Ocultar menú
+      icon.classList.toggle("active"); // Rotar el icono
+    }
+  </script>
+</body>
+
 </html>

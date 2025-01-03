@@ -23,16 +23,20 @@
 
 #productos-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 4 productos por fila */
-  gap: 20px; /* Espacio entre productos */
+  grid-template-columns: repeat(5, 1fr);
+  /* 4 productos por fila */
+  gap: 20px;
+  /* Espacio entre productos */
   padding: 20px;
 }
 
 /* Producto individual */
 .producto img {
   max-width: 100%;
-  max-height: 300px; /* Limitar el alto máximo de la imagen */
-  height: auto; /* Mantener la proporción */
+  max-height: 300px;
+  /* Limitar el alto máximo de la imagen */
+  height: auto;
+  /* Mantener la proporción */
   border-radius: 15px;
 }
 
@@ -49,7 +53,8 @@
 }
 
 .producto:hover {
-  transform: translateY(-5px); /* Efecto hover para los productos */
+  transform: translateY(-5px);
+  /* Efecto hover para los productos */
 }
 
 .producto .precio {
@@ -65,11 +70,13 @@
 }
 
 .producto .precio .promocion {
-  color: #e74c3c; /* Rojo para el precio promocional */
+  color: #e74c3c;
+  /* Rojo para el precio promocional */
 }
 
 .producto button {
-  background-color: #ee8379; /* Naranja cálido */
+  background-color: #ee8379;
+  /* Naranja cálido */
   color: white;
   padding: 10px 20px;
   border: none;
@@ -84,7 +91,8 @@
 }
 
 button {
-  background-color: #ff6f61; /* Naranja cálido para botones */
+  background-color: #ff6f61;
+  /* Naranja cálido para botones */
   color: #fff;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -94,7 +102,8 @@ button {
 }
 
 button:hover {
-  background-color: #d85c4f; /* Naranja oscuro para hover */
+  background-color: #d85c4f;
+  /* Naranja oscuro para hover */
 }
 
 /* Botón "Añadir al carrito" */
@@ -138,31 +147,12 @@ form textarea {
 
 form button {
   width: 100%;
-  background-color: #ff6f61; /* Naranja cálido */
+  background-color: #ff6f61;
+  /* Naranja cálido */
   padding: 1rem;
   font-size: 1rem;
 }
 
-/* Estilo para el ícono del carrito */
-.cart-icon {
-  position: relative;
-  color: white;
-  font-size: 1.5rem;
-  text-decoration: none;
-}
-
-.cart-icon #cart-count {
-  position: absolute;
-  top: -5px;
-  right: -10px;
-  background: red;
-  color: white;
-  border-radius: 50%;
-  padding: 2px 6px;
-  font-size: 0.8rem;
-  font-weight: bold;
-  display: none;
-}
 
 /* Estilo del carrito */
 #carrito-items {
@@ -230,7 +220,8 @@ form button {
 /* Botón de Vaciar Carrito */
 
 section .botones {
-  text-align: center; /* Centra el contenido dentro del contenedor */
+  text-align: center;
+  /* Centra el contenido dentro del contenedor */
 }
 
 #boton-vaciar,
@@ -241,9 +232,12 @@ section .botones {
   border: none;
   cursor: pointer;
   border-radius: 5px;
-  width: 20%; /* Ajusta el ancho del botón */
-  display: block; /* Hace que el botón sea un bloque para que pueda centrarse */
-  margin: 10px auto; /* Aplica un margen automático para centrar el botón */
+  width: 20%;
+  /* Ajusta el ancho del botón */
+  display: block;
+  /* Hace que el botón sea un bloque para que pueda centrarse */
+  margin: 10px auto;
+  /* Aplica un margen automático para centrar el botón */
   background-color: #ff9aa2;
 }
 
@@ -278,23 +272,28 @@ section .botones {
 /* Media Queries para hacer que los productos sean responsivos */
 @media (max-width: 1200px) {
   #productos-container {
-    grid-template-columns: repeat(4, 1fr); /* 4 productos por fila */
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 productos por fila */
   }
 }
 
 @media (max-width: 939px) {
   #productos-container {
-    grid-template-columns: repeat(3, 1fr); /* 3 productos por fila */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 productos por fila */
   }
+
   #boton-vaciar,
   #boton-pagar {
-    width: 40%; /* Ajusta el ancho del botón */
+    width: 40%;
+    /* Ajusta el ancho del botón */
   }
 }
 
 @media (max-width: 600px) {
   #productos-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 producto por fila */
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 producto por fila */
     padding: 10px;
   }
 
@@ -317,6 +316,7 @@ section .botones {
 
   #boton-vaciar,
   #boton-pagar {
-    width: 50%; /* Ajusta el ancho del botón */
+    width: 50%;
+    /* Ajusta el ancho del botón */
   }
 }

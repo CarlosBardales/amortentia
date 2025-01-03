@@ -9,35 +9,243 @@
   --color-sombra: rgba(0, 0, 0, 0.1);
 }
 
-.header-bar {
-  background-color: #b7e8e6; /* Fondo celeste */
-  color: white;
-  display: flex; /* Habilitar Flexbox */
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center; /* Centrar verticalmente */
-
-  /* Espaciado entre elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.header-bar .logo img {
-  height: 120px; /* Ajustar tamaño del logo */
+html,
+body {
+  min-width: 375px;
+  /* Establece el ancho mínimo de la página */
+  min-height: auto;
+  /* Establece la altura mínima de la página */
+  width: 100%;
+  /* Asegura que la página ocupe el 100% del ancho */
+  height: 100%;
+  /* Asegura que la página ocupe el 100% de la altura */
+  margin: 0;
+  /* Elimina el margen predeterminado del navegador */
+  padding: 0;
+  /* Elimina el relleno predeterminado del navegador */
+  overflow-x: hidden;
+  /* Evita el desplazamiento horizontal */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  /* Cambio a un tono más cálido y suave */
+  color: #333;
+  line-height: 1.6;
+}
+
+main {
+  padding: 1rem;
+}
+
+header {
+  header {
+    display: flex;
+    /* Usa flexbox para distribuir los elementos */
+    justify-content: space-between;
+    /* Alinea los elementos a los extremos */
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    padding: 15px 20px;
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+  }
+}
+
+footer {
+  background-color: var(--color-secundario);
+  color: var(--color-blanco);
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+}
+
+footer nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+footer nav ul li {
+  margin: 0;
+}
+
+footer nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer nav ul li a:hover {
+  text-decoration: underline;
+}
+
+footer p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+/* PENDIENTES revision*/
+
+#modal-carrusel {
+  animation: aparecer 0.3s ease-out;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Estilo del formulario de contacto y checkout */
+/* Estilo general para el formulario */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  /* Ajusta el tamaño máximo del formulario */
+  margin: 20px auto;
+  /* Centra el formulario */
+}
+
+/* Estilo para los inputs y textarea */
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  /* Asegura que el padding no cambie el tamaño total */
+}
+
+/* Estilo para el botón "Enviar Mensaje" */
+#contact-form button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #ff6f61;
+  color: white;
+  border: none;
+  /* Elimina el borde del botón */
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  /* Elimina el borde al hacer foco */
+}
+
+/* Efecto hover para el botón */
+#contact-form button:hover {
+  background: #ff6f61;
+}
+
+/* Elimina el marco del botón al recibir foco */
+#contact-form button:focus {
+  outline: none;
+  /* Elimina el marco de enfoque */
+}
+
+/* Efecto de transición en los campos y botón */
+#contact-form input:focus,
+#contact-form textarea:focus {
+  border-color: #ff6f61;
+  /* Cambia el borde a un color de énfasis */
+  outline: none;
+  /* Elimina cualquier marco de enfoque por defecto */
+}
+
+@media (max-width: 520px) {
+  #contact-form {
+    margin: 10px;
+    /* Centra el formulario */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* navegacion */
+.header-logo {
+  display: flex;
+  justify-content: center;
+  /* Centra el logo */
+  align-items: center;
+  flex-grow: 1;
+  /* Asegura que el logo ocupe el espacio necesario para centrarse */
+
+}
+
+.header-logo .logo img {
+  height: 120px;
+  /* Ajustar tamaño del logo */
   width: auto;
-  margin-top: 15px;
 }
 
 /* Barra de navegación */
-header nav {
+header div {
+  background-color: var(--color-secundario);
   display: flex;
-  justify-content: space-between; /* Alinea el logo, el menú y el carrito */
+  justify-content: space-between;
+  /* Alinea el logo, el menú y el carrito */
   align-items: center;
-  padding: 15px 20px;
-  background-color: var(--color-terciario); /* Rosa vibrante */
+  padding: 5px 10px;
+
+
+}
+
+header div .nav {
+  background-color: #ff9aa2;
+  /* Rosa vibrante */
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
 }
 
 /* Contenedor de los enlaces del menú */
-header nav .nav-links {
+header .nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
@@ -46,7 +254,7 @@ header nav .nav-links {
 }
 
 /* Enlaces del menú */
-header nav .nav-links li a {
+header .nav-links li a {
   text-decoration: none;
   color: #ffffff;
   font-weight: bold;
@@ -57,90 +265,231 @@ header nav .nav-links li a {
 }
 
 /* Efecto hover sobre los enlaces */
-header nav .nav-links li a:hover {
-  background-color: #e64a70; /* Rosa más oscuro para hover */
+header .nav-links li a:hover {
+  background-color: #e64a70;
+  /* Rosa más oscuro para hover */
   color: #f9f9f9;
 }
 
 /* Carrito de compras */
-header nav .cart-icon {
-  font-size: 1.5rem;
+
+
+.position-cart {
+  display: flex;
+  align-items: center;
+
+}
+
+header .cart-icon {
+  background: none;
+  border: none;
+  font-size: 100%;
+  cursor: pointer;
+}
+
+/* Efecto hover sobre el carrito */
+header .cart-icon:hover {
+  transform: scale(1.1);
+  color: #ffd1dc;
+}
+
+
+/* Carrito de compras */
+header .cart-icon {
+  font-size: 100%;
   color: #ffffff;
   position: relative;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-/* Efecto hover sobre el carrito */
-header nav .cart-icon:hover {
-  transform: scale(1.1);
-  color: #ffd1dc;
-}
-
-header nav .cart-icon #cart-count {
+header .cart-icon #cart-count {
   position: absolute;
   top: -10px;
   right: -10px;
   background: #f5426c;
   color: white;
   border-radius: 50%;
-  padding: 5px 10px;
-  font-size: 0.8rem;
+  padding: 2px 4px;
+  font-size: 50%;
   font-weight: bold;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+
+
 /* Ícono del menú hamburguesa */
-header nav .menu-icon {
-  display: none; /* Inicialmente oculto */
+header .menu-icon {
+  display: none;
+  /* Inicialmente oculto */
   font-size: 2rem;
   color: white;
   cursor: pointer;
 }
 
 /* Cuando el menú hamburguesa está activo, el menú aparece */
-header nav .nav-links.active {
+header .nav-links.active {
   display: block;
   width: 100%;
-  background-color: var(--color-terciario);
+  background-color: #ff9aa2;
   position: absolute;
-  top: 60px; /* Asegúrate de que el menú no se solape con el header */
+  top: 60px;
+  /* Asegúrate de que el menú no se solape con el header */
   left: 0;
   padding: 10px;
   border-radius: 10px;
 }
 
+.header .nav,
+.header .sidebar,
+.header .position-cart {
+  background-color: #ff9aa2;
+}
+
+
 /* Para pantallas pequeñas */
 @media (max-width: 768px) {
-  header nav {
-    justify-content: space-between; /* Alinea todos los elementos en la misma fila */
+
+  .header .nav,
+  .header .position-cart {
+    background-color: var(--color-secundario);
   }
 
-  /* Enlaces de navegación ocultos por defecto */
-  header nav .nav-links {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    gap: 10px;
-    padding: 0;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 5px;
+    background-color: var(--color-secundario);
+    color: white;
+    position: relative;
   }
+
+  .header-logo .logo img {
+    height: 80px;
+  }
+
+
+  .header-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  */ .sidebar {
+    width: 250px;
+  }
+
+  header div .nav {
+    display: flex;
+    justify-content: center;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    padding: 0px;
+
+  }
+
 
   /* Mostrar el menú hamburguesa */
-  header nav .menu-icon {
-    display: block;
+  /* Estilo del icono de menú (aumentamos el tamaño aquí) */
+  header .menu-icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 90vw;
+    /* Asegura que el área del ícono tenga un tamaño adecuado */
+    cursor: pointer;
   }
 
-  /* Mostrar el menú cuando el ícono de hamburguesa es clickeado */
-  header nav .nav-links.active {
-    display: block;
+  header .nav-links {
+    display: none;
   }
 
-  /* Asegurar que el carrito se quede al lado del menú en móviles */
-  header nav .cart-icon {
-    order: 1; /* Asegura que el carrito esté en la misma fila que el menú */
+  /* Carrito de compras */
+  header .cart-icon {
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 100%;
+    color: #ffffff;
+    position: relative;
+    transition: transform 0.3s ease, background-color 0.3s ease;
   }
-  .header-bar .logo img {
-    height: 40px; /* Ajustar tamaño del logo */
-    width: auto;
-    margin-top: 15px;
+
+
+
+  /* Barra lateral (menú hamburguesa) - Se despliega desde el lado izquierdo */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    /* Inicialmente fuera de la pantalla por la izquierda */
+    width: 150px;
+    height: 100%;
+    background-color: #ff9aa2;
+    transition: all 0.3s ease;
+    z-index: 999;
   }
+
+  .sidebar.open {
+    left: 0;
+    /* Cuando el menú se activa, se mueve a la izquierda */
+  }
+
+
+  .sidebar.open .nav-links {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+  }
+
+  .sidebar {
+    left: -250px;
+    /* Establecemos la barra lateral fuera de la pantalla a la izquierda */
+  }
+
+  .sidebar.open {
+    left: 0;
+    /* Cuando el menú se activa, se mueve a la izquierda */
+  }
+
+  /* Cambiamos el tamaño de los enlaces en el menú lateral */
+  .sidebar .nav-links li {
+    margin: 10px 0;
+  }
+
+  .sidebar .nav-links a {
+    font-size: 18px;
+  }
+}
+
+
+@media (max-width: 660px) {
+
+  /* Mostrar el menú hamburguesa */
+  /* Estilo del icono de menú (aumentamos el tamaño aquí) */
+  header .menu-icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 90vw;
+    /* Asegura que el área del ícono tenga un tamaño adecuado */
+    cursor: pointer;
+  }
+
+}
+
+@media (max-width: 540px) {
+
+  /* Mostrar el menú hamburguesa */
+  /* Estilo del icono de menú (aumentamos el tamaño aquí) */
+  header .menu-icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 85vw;
+    /* Asegura que el área del ícono tenga un tamaño adecuado */
+    cursor: pointer;
+  }
+
 }

@@ -1,0 +1,65 @@
+/* Estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Cabecera principal */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+}
+
+/* Contenedor del ícono de menú */
+.menu-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;  /* Asegura que el área del ícono tenga un tamaño adecuado */
+    cursor: pointer;
+}
+
+/* Estilo del icono de menú (aumentamos el tamaño aquí) */
+.bx {
+    font-size: 80px;  /* Aumenta el tamaño del icono */
+    color: white;     /* Color blanco */
+}
+
+/* Logo centrado */
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo-img {
+    height: 40px;
+}
+
+/* Carrito de compras */
+.carrito {
+    display: flex;
+    align-items: center;
+}
+
+.carrito-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Estilos cuando el ícono se convierte en una "X" (al hacer clic) */
+.bx-x {
+    transform: rotate(45deg);
+}
