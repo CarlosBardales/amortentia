@@ -84,7 +84,17 @@
     <p>RUC: 10702396838 | Amortentia Regalos</p>
     <p>&copy; 2024 Amortentia Perú | Todos los derechos reservados</p>
   </footer>
-  <script src="../js/productos.js"></script>
+  <!-- Scripts -->
+  <script src="../js/lateral.js" defer></script>
+  <script src="../js/productos.js" defer></script>
+  <!-- Script para manejar el menú hamburguesa -->
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector('.sidebar');
+      menu.classList.toggle('active');
+    }
+  </script>
+
   <script>
     document
       .getElementById("contact-form")
@@ -97,6 +107,7 @@
       icon.classList.toggle("active"); // Rotar el icono
     }
   </script>
+
 </body>
 
 </html>
