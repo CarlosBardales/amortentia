@@ -47,7 +47,7 @@ function agregarProductoAlCarrito() {
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
     // Obtener el ID del producto actual
-    const productoId = localStorage.getItem('producto-detalle');
+    const productoId = localStorage.getItem("producto-detalle");
 
     // Recuperar los productos almacenados en localStorage (debe ser un arreglo)
     const productos = JSON.parse(localStorage.getItem("productos")) || [];
@@ -85,12 +85,14 @@ function agregarProductoAlCarrito() {
                 item.fechaEntrega === fechaEntrega
         );
 
-        if (productoExistente) {
+        if (!productoExistente) {
             // Si ya existe un producto con las mismas variaciones, incrementar la cantidad
-            productoExistente.cantidad += cantidad;
+            carrito.push(itemCarrito);
+
         } else {
             // Si no existe, agregarlo como un nuevo producto con esas variaciones
-            carrito.push(itemCarrito);
+
+            productoExistente.cantidad += cantidad;
         }
 
         // Guardar el carrito actualizado en localStorage
