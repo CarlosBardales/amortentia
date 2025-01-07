@@ -1,8 +1,8 @@
 // Función para mostrar el carrito de compras con todos los detalles
 function mostrarCarritoDeCompras() {
-    
+
     const productos = JSON.parse(localStorage.getItem('productos')) || [];
-    let carrito = JSON.parse(localStorage.getItem('carrito')) || []; 
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
     // Verifica si 'carrito' no es un array
     if (!Array.isArray(carrito)) {
@@ -12,20 +12,20 @@ function mostrarCarritoDeCompras() {
 
     const carritoContainer = document.getElementById('carrito-items');
     const totalContainer = document.getElementById('total');
-    
+
     carritoContainer.innerHTML = '';  // Limpiar el contenedor antes de renderizar
     let total = 0;
 
-   // Agrupar los productos directamente usando la cantidad existente
+    // Agrupar los productos directamente usando la cantidad existente
     carrito.forEach(item => {
-            const producto = productos.find(p => p.id === item.id);
-            if (producto) {
-                total += producto.precio * item.cantidad;
+        const producto = productos.find(p => p.id === item.id);
+        if (producto) {
+            total += producto.precio * item.cantidad;
 
-                const itemContainer = document.createElement('li');
-                itemContainer.classList.add('producto-carrito');
+            const itemContainer = document.createElement('li');
+            itemContainer.classList.add('producto-carrito');
 
-                itemContainer.innerHTML = `
+            itemContainer.innerHTML = `
                     <img src="${producto.imagen}" alt="${producto.nombre}">
                     <div>
                         <h3>${producto.nombre}</h3>
@@ -40,19 +40,19 @@ function mostrarCarritoDeCompras() {
                         </div>
                     </div>
                 `;
-                carritoContainer.appendChild(itemContainer);
-            }
-        });
+            carritoContainer.appendChild(itemContainer);
+        }
+    });
 
     totalContainer.textContent = `Total: S/${total.toFixed(2)}`;  // Mostrar el total
 }
 
 function eliminarProducto(id) {
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    
+
     // Buscar el producto en el carrito
     const productoIndex = carrito.findIndex(item => item.id === id);
-    
+
     if (productoIndex !== -1) {
         // Si la cantidad es mayor a 1, reducirla
         if (carrito[productoIndex].cantidad > 1) {
@@ -100,13 +100,13 @@ function vaciarCarrito() {
 function generarEnlaceWhatsApp() {
     // Recuperar el carrito desde localStorage y verificar que sea un array
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    
+
     // Asegurarse de que 'carrito' es un array
     if (!Array.isArray(carrito)) {
         carrito = [];  // Si no es un array válido, inicializarlo como un array vacío
         localStorage.setItem('carrito', JSON.stringify(carrito));  // Guardarlo en localStorage
     }
-    
+
     const productos = JSON.parse(localStorage.getItem('productos')) || [];
     let mensaje = "¡Hola! Quiero comprar los siguientes productos:\n";
 
@@ -118,7 +118,7 @@ function generarEnlaceWhatsApp() {
         if (found) {
             found.cantidad++; // Si ya existe, sumar la cantidad
         } else {
-            acc.push({...item, cantidad: 1});
+            acc.push({ ...item, cantidad: 1 });
         }
         return acc;
     }, []);
@@ -154,19 +154,19 @@ document.addEventListener('DOMContentLoaded', mostrarCarritoDeCompras);
 document.getElementById('boton-vaciar').addEventListener('click', vaciarCarrito);
 
 // Evento para redirigir a WhatsApp al hacer clic en "Pagar"
-document.getElementById('boton-pagar').addEventListener('click', function() {
+document.getElementById('boton-pagar').addEventListener('click', function () {
     pagarEnWhatsApp();  // Llamada a la función que redirige a WhatsApp
 });
 
 // Delegación de eventos para los botones de "Agregar más" y "Eliminar"
 
-document.getElementById('carrito-items').addEventListener('click', function(event) {
+document.getElementById('carrito-items').addEventListener('click', function (event) {
     const target = event.target;
 
     if (target.classList.contains('agregar-mas')) {
         const id = parseInt(target.getAttribute('data-id'));
         agregarMasProducto(id); // Llamar a la función para agregar más productos
-        
+
     }
 
     if (target.classList.contains('eliminar')) {

@@ -50,38 +50,22 @@ async function cargarProductos() {
     }
 }
 
-
-function actualizarContadorCarrito() {
-    // Esperamos a que el DOM se haya cargado completamente
-    document.addEventListener('DOMContentLoaded', () => {
-        const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-        const contador = document.getElementById('cart-count'); // Obtener el elemento del contador
-
-        // Verificar si el contador existe en el DOM
-        if (contador) {
-            if (carrito.length > 0) {
-                contador.style.display = 'inline'; // Mostrar el contador si hay productos en el carrito
-                contador.textContent = carrito.length; // Mostrar la cantidad de productos
-            } else {
-                contador.style.display = 'none'; // Ocultar el contador si no hay productos en el carrito
-            }
-        } else {
-            console.error('El elemento con id "cart-count" no se encuentra en el DOM.');
-        }
-    });
-}
-
 // Actualizar el contador del carrito
+
 function actualizarContadorCarrito() {
-    const carrito = JSON.parse(localStorage.getItem('carrito')) || {};
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     const contador = document.getElementById('cart-count');
     if (contador) {
-        if (carrito.length > 0) {
+        // Sumar la cantidad de productos en el carrito
+        const totalProductos = carrito.reduce((acc, item) => acc + item.cantidad, 0);
+        if (totalProductos > 0) {
             contador.style.display = 'inline';
-            contador.textContent = carrito.length; // Mostrar la cantidad de productos
+            contador.textContent = totalProductos; // Mostrar la cantidad total de productos
         } else {
             contador.style.display = 'none'; // Ocultar si no hay productos
         }
+    } else {
+        console.error('El elemento con id "cart-count" no se encuentra en el DOM.');
     }
 }
 

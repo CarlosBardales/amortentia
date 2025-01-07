@@ -8,7 +8,6 @@
     content="Descubre Amortentia Regalos, la tienda online de regalos personalizados y únicos para cada ocasión." />
   <link rel="stylesheet" href="../css/navegacion.css" />
   <link rel="stylesheet" href="../css/productos.css" />
-  <link rel="stylesheet" href="../css/estructura.css" />
 
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
 
@@ -16,26 +15,34 @@
 </head>
 
 <body>
-  <!-- Barra Superior -->
-  <div class="header-bar">
-    <div class="logo">
-      <img src="../img/icons/logo.png" alt="Logo de Amortentia Regalos" />
-    </div>
-  </div>
-  <header>
-    <nav>
-      <!-- Ícono del menú hamburguesa -->
-      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  <header class="header">
 
-      <!-- Enlaces de navegación -->
-      <ul class="nav-links">
-        <li><a href="../index.html">Inicio</a></li>
-        <li><a href="productos.html">Productos</a></li>
-        <li><a href="creligiosas.html">Recuerdos</a></li>
-        <li><a href="navidad.html">Navidad</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
+    <!-- Barra Superior -->
+    <div class="header-logo">
+      <div class="logo">
+        <img src="../img/icons/logo.png" alt="Logo de Amortentia Regalos">
+      </div>
+    </div>
+
+    <div class="nav">
+      <!-- Ícono de menú hamburguesa (aparece solo en pantallas pequeñas) -->
+      <div class="menu-icon" onclick="toggleMenu()">
+        <i class='bx bx-menu' id="btn"></i>
+      </div>
+
+      <div class="sidebar">
+        <ul class="nav-links">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="../pages/productos.html">Productos</a></li>
+          <li><a href="../pages/creligiosas.html">Recuerdos</a></li>
+          <li><a href="../pages/navidad.html">Navidad</a></li>
+          <li><a href="../pages/contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    </div>
   </header>
   <main>
     <section id="carrito">
@@ -63,6 +70,15 @@
     <p>&copy; 2024 Amortentia Perú | Todos los derechos reservados</p>
   </footer>
   <script src="../js/carrito.js"></script>
+  <script src="./js/lateral.js" defer></script>
+
+  <!-- Script para manejar el menú hamburguesa -->
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector('.sidebar');
+      menu.classList.toggle('active');
+    }
+  </script>
 
   <script>
     function toggleMenu() {

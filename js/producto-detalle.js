@@ -17,7 +17,7 @@ function cargarDetalleProducto() {
 
         // Asegurarse de que el producto tenga imágenes secundarias
         const imagenes = [producto.imagen, producto.imagen2, producto.imagen3];
-        
+
         imagenes.forEach(imagen => {
             const imgElement = document.createElement('img');
             imgElement.src = imagen;
@@ -44,25 +44,25 @@ function cargarDetalleProducto() {
 // Agregar producto al carrito con la cantidad ingresada en el formulario
 function agregarProductoAlCarrito() {
     // Recuperar el carrito actual del localStorage, si no existe, inicializarlo como un arreglo vacío
-    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
     // Obtener el ID del producto actual
     const productoId = localStorage.getItem('producto-detalle');
-    
+
     // Recuperar los productos almacenados en localStorage (debe ser un arreglo)
-    const productos = JSON.parse(localStorage.getItem('productos')) || [];
-    
+    const productos = JSON.parse(localStorage.getItem("productos")) || [];
+
     // Buscar el producto en el arreglo de productos
-    const producto = productos.find(p => p.id == productoId);
+    const producto = productos.find((p) => p.id == productoId);
 
     // Obtener la cantidad ingresada en el formulario, por defecto es 1
-    const cantidad = parseInt(document.getElementById('cantidad').value) || 1;
+    const cantidad = parseInt(document.getElementById("cantidad").value) || 1;
 
     // Otros campos relacionados con el producto (opcional)
-    const turnoEntrega = document.getElementById('turno-entrega').value;
-    const fechaEntrega = document.getElementById('fecha-entrega').value;
-    const mensajeTarjeta = document.getElementById('mensaje-tarjeta').value;
-    
+    const turnoEntrega = document.getElementById("turno-entrega").value;
+    const fechaEntrega = document.getElementById("fecha-entrega").value;
+    const mensajeTarjeta = document.getElementById("mensaje-tarjeta").value;
+
     if (producto) {
         // Crear un objeto con todas las variaciones del producto
         const itemCarrito = {
@@ -73,15 +73,16 @@ function agregarProductoAlCarrito() {
             cantidad: cantidad,
             mensajeTarjeta: mensajeTarjeta,
             turnoEntrega: turnoEntrega,
-            fechaEntrega: fechaEntrega
+            fechaEntrega: fechaEntrega,
         };
 
         // Verificar si el producto con esas variaciones ya existe en el carrito
-        const productoExistente = carrito.find(item => 
-            item.id === producto.id && 
-            item.mensajeTarjeta === mensajeTarjeta && 
-            item.turnoEntrega === turnoEntrega && 
-            item.fechaEntrega === fechaEntrega
+        const productoExistente = carrito.find(
+            (item) =>
+                item.id === producto.id &&
+                item.mensajeTarjeta === mensajeTarjeta &&
+                item.turnoEntrega === turnoEntrega &&
+                item.fechaEntrega === fechaEntrega
         );
 
         if (productoExistente) {
@@ -93,28 +94,32 @@ function agregarProductoAlCarrito() {
         }
 
         // Guardar el carrito actualizado en localStorage
-        localStorage.setItem('carrito', JSON.stringify(carrito));
+        localStorage.setItem("carrito", JSON.stringify(carrito));
 
         // Mostrar un mensaje de éxito y redirigir al carrito
-        alert('Producto agregado al carrito.');
-        window.location.href = 'carrito.html'; // Redirigir a la página del carrito
+        alert("Producto agregado al carrito.");
+        window.location.href = "carrito.html"; // Redirigir a la página del carrito
     } else {
-        alert('Producto no encontrado.');
+        alert("Producto no encontrado.");
     }
 }
 
-
 // Actualizar el contador del carrito
+
 function actualizarContadorCarrito() {
-    const carrito = JSON.parse(localStorage.getItem('carrito')) || {};
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     const contador = document.getElementById('cart-count');
     if (contador) {
-        if (carrito.length > 0) {
+        // Sumar la cantidad de productos en el carrito
+        const totalProductos = carrito.reduce((acc, item) => acc + item.cantidad, 0);
+        if (totalProductos > 0) {
             contador.style.display = 'inline';
-            contador.textContent = carrito.length; // Mostrar la cantidad de productos
+            contador.textContent = totalProductos; // Mostrar la cantidad total de productos
         } else {
             contador.style.display = 'none'; // Ocultar si no hay productos
         }
+    } else {
+        console.error('El elemento con id "cart-count" no se encuentra en el DOM.');
     }
 }
 
