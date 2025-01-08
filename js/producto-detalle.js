@@ -44,24 +44,24 @@ function cargarDetalleProducto() {
 // Agregar producto al carrito con la cantidad ingresada en el formulario
 function agregarProductoAlCarrito() {
     // Recuperar el carrito actual del localStorage, si no existe, inicializarlo como un arreglo vacío
-    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
     // Obtener el ID del producto actual
-    const productoId = localStorage.getItem("producto-detalle");
+    const productoId = localStorage.getItem('producto-detalle');
 
     // Recuperar los productos almacenados en localStorage (debe ser un arreglo)
-    const productos = JSON.parse(localStorage.getItem("productos")) || [];
+    const productos = JSON.parse(localStorage.getItem('productos')) || [];
 
     // Buscar el producto en el arreglo de productos
-    const producto = productos.find((p) => p.id == productoId);
+    const producto = productos.find(p => p.id == productoId);
 
     // Obtener la cantidad ingresada en el formulario, por defecto es 1
-    const cantidad = parseInt(document.getElementById("cantidad").value) || 1;
+    const cantidad = parseInt(document.getElementById('cantidad').value) || 1;
 
     // Otros campos relacionados con el producto (opcional)
-    const turnoEntrega = document.getElementById("turno-entrega").value;
-    const fechaEntrega = document.getElementById("fecha-entrega").value;
-    const mensajeTarjeta = document.getElementById("mensaje-tarjeta").value;
+    const turnoEntrega = document.getElementById('turno-entrega').value;
+    const fechaEntrega = document.getElementById('fecha-entrega').value;
+    const mensajeTarjeta = document.getElementById('mensaje-tarjeta').value;
 
     if (producto) {
         // Crear un objeto con todas las variaciones del producto
@@ -74,54 +74,67 @@ function agregarProductoAlCarrito() {
             mensajeTarjeta: mensajeTarjeta,
             turnoEntrega: turnoEntrega,
             fechaEntrega: fechaEntrega,
+            uniqueId: productoId // ID único basado en los atributos
         };
 
         // Verificar si el producto con esas variaciones ya existe en el carrito
-        const productoExistente = carrito.find(
-            (item) =>
-                item.id === producto.id &&
-                item.mensajeTarjeta === mensajeTarjeta &&
-                item.turnoEntrega === turnoEntrega &&
-                item.fechaEntrega === fechaEntrega
+        const productoExistente = carrito.find(item =>
+            item.id === producto.id &&
+            item.mensajeTarjeta === mensajeTarjeta &&
+            item.turnoEntrega === turnoEntrega &&
+            item.fechaEntrega === fechaEntrega
         );
 
-        if (!productoExistente) {
+        let nuevoIduniqueId = `${producto.id}`; // Empezamos con ID.1
+
+        if (productoExistente) {
             // Si ya existe un producto con las mismas variaciones, incrementar la cantidad
+            productoExistente.cantidad += cantidad;
+        } else {
+
+            // Si no existe, generar un nuevo ID y agregarlo al carrito
+            let contador = 0;
+
+            // Buscar un nuevo ID único
+            while (carrito.some((item) => item.uniqueId === nuevoIduniqueId)) {
+                contador++;
+                nuevoIduniqueId = `${producto.id}.${contador}`;  // Generamos un nuevo ID único
+
+
+            }
+
+            // Asignar el nuevo ID al producto
+            itemCarrito.uniqueId = nuevoIduniqueId;
+
+            // Agregar el producto con variaciones al carrito
             carrito.push(itemCarrito);
 
-        } else {
-            // Si no existe, agregarlo como un nuevo producto con esas variaciones
-
-            productoExistente.cantidad += cantidad;
         }
 
+
         // Guardar el carrito actualizado en localStorage
-        localStorage.setItem("carrito", JSON.stringify(carrito));
+        localStorage.setItem('carrito', JSON.stringify(carrito));
 
         // Mostrar un mensaje de éxito y redirigir al carrito
-        alert("Producto agregado al carrito.");
-        window.location.href = "carrito.html"; // Redirigir a la página del carrito
+        // alert('Producto agregado al carrito.');
+        window.location.href = 'carrito.html'; // Redirigir a la página del carrito
     } else {
-        alert("Producto no encontrado.");
+        alert('Producto no encontrado.');
     }
 }
 
-// Actualizar el contador del carrito
 
+// Actualizar el contador del carrito
 function actualizarContadorCarrito() {
-    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || {};
     const contador = document.getElementById('cart-count');
     if (contador) {
-        // Sumar la cantidad de productos en el carrito
-        const totalProductos = carrito.reduce((acc, item) => acc + item.cantidad, 0);
-        if (totalProductos > 0) {
+        if (carrito.length > 0) {
             contador.style.display = 'inline';
-            contador.textContent = totalProductos; // Mostrar la cantidad total de productos
+            contador.textContent = carrito.length; // Mostrar la cantidad de productos
         } else {
             contador.style.display = 'none'; // Ocultar si no hay productos
         }
-    } else {
-        console.error('El elemento con id "cart-count" no se encuentra en el DOM.');
     }
 }
 

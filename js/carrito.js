@@ -1,23 +1,31 @@
 // Función para mostrar el carrito de compras con todos los detalles
 function mostrarCarritoDeCompras() {
-
     const productos = JSON.parse(localStorage.getItem('productos')) || [];
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
-    // Verifica si 'carrito' no es un array
-    if (!Array.isArray(carrito)) {
-        carrito = []; // Si no es un array válido, inicializarlo como un array vacío
-        localStorage.setItem('carrito', JSON.stringify(carrito)); // Guardar el array vacío en localStorage
-    }
+    // Agrupar los productos por uniqueId
+    const carritoAgrupado = carrito.reduce((acc, item) => {
+        // Si el producto ya está en el carrito agrupado, aumentamos la cantidad
+        const productoExistente = acc.find(p => p.uniqueId === item.uniqueId);
+        if (productoExistente) {
+            productoExistente.cantidad += item.cantidad;
+        } else {
+            acc.push({ ...item });
+        }
+        return acc;
+    }, []);
+
+    // Guardar el carrito agrupado en localStorage
+    localStorage.setItem('carritoAgrupado', JSON.stringify(carritoAgrupado));
 
     const carritoContainer = document.getElementById('carrito-items');
     const totalContainer = document.getElementById('total');
-
     carritoContainer.innerHTML = '';  // Limpiar el contenedor antes de renderizar
+
     let total = 0;
 
-    // Agrupar los productos directamente usando la cantidad existente
-    carrito.forEach(item => {
+    // Mostrar los productos agrupados en el carrito
+    carritoAgrupado.forEach(item => {
         const producto = productos.find(p => p.id === item.id);
         if (producto) {
             total += producto.precio * item.cantidad;
@@ -26,32 +34,33 @@ function mostrarCarritoDeCompras() {
             itemContainer.classList.add('producto-carrito');
 
             itemContainer.innerHTML = `
-                    <img src="${producto.imagen}" alt="${producto.nombre}">
-                    <div>
-                        <h3>${producto.nombre}</h3>
-                        <p>Cantidad: ${item.cantidad}</p>
-                        <p><strong>Precio: </strong>S/${producto.precio * item.cantidad}</p>
-                        <p><strong>Mensaje para la tarjeta:</strong> ${item.mensajeTarjeta || "Ninguno"}</p>
-                        <p><strong>Turno de entrega:</strong> ${item.turnoEntrega || "No especificado"}</p>
-                        <p><strong>Fecha de entrega:</strong> ${item.fechaEntrega || "No especificado"}</p>
-                        <div class="acciones">
-                            <button class="agregar-mas" data-id="${producto.id}">Agregar más</button>
-                            <button class="eliminar" data-id="${producto.id}">Eliminar</button>
-                        </div>
+                <img src="${producto.imagen}" alt="${producto.nombre}">
+                <div>
+                    <h3>${producto.nombre}</h3>
+                    <p>Cantidad: ${item.cantidad}</p>
+                    <p><strong>Precio: </strong>S/${producto.precio * item.cantidad}</p>
+                    <p><strong>Mensaje para la tarjeta:</strong> ${item.mensajeTarjeta || "Ninguno"}</p>
+                    <p><strong>Turno de entrega:</strong> ${item.turnoEntrega || "No especificado"}</p>
+                    <p><strong>Fecha de entrega:</strong> ${item.fechaEntrega || "No especificado"}</p>
+                    <div class="acciones">
+                        <button class="agregar-mas" data-id="${item.uniqueId}">Agregar más</button>
+                        <button class="eliminar" data-id="${item.uniqueId}">Eliminar</button>
                     </div>
-                `;
+                </div>
+            `;
             carritoContainer.appendChild(itemContainer);
         }
     });
 
-    totalContainer.textContent = `Total: S/${total.toFixed(2)}`;  // Mostrar el total
+    totalContainer.textContent = `Total: S/${total.toFixed(2)}`;
 }
 
-function eliminarProducto(id) {
+
+function eliminarProducto(uniqueId) {
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
     // Buscar el producto en el carrito
-    const productoIndex = carrito.findIndex(item => item.id === id);
+    const productoIndex = carrito.findIndex(item => item.uniqueId === uniqueId);
 
     if (productoIndex !== -1) {
         // Si la cantidad es mayor a 1, reducirla
@@ -69,22 +78,23 @@ function eliminarProducto(id) {
 }
 
 
-function agregarMasProducto(id) {
+function agregarMasProducto(nuevouniqueId) {
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
-    const productoExistente = carrito.find(item => item.id === id);
+    // Buscar el producto en el carrito usando su 'uniqueId'
+    const productoExistente = carrito.find(item => item.uniqueId === String(nuevouniqueId));
+
     if (productoExistente) {
-        // Si el producto ya existe, aumentar la cantidad
-        productoExistente.cantidad++;
+        productoExistente.cantidad++;  // Aumentar la cantidad
+        localStorage.setItem('carrito', JSON.stringify(carrito));  // Guardar en localStorage
     } else {
-        // Si no está en el carrito, agregarlo con cantidad 1
-        carrito.push({ id: id, cantidad: 1, mensajeTarjeta: '', turnoEntrega: '', fechaEntrega: '' });
+        alert('Producto no encontrado en el carrito.');
     }
 
-    // Guardar el carrito actualizado en localStorage
-    localStorage.setItem('carrito', JSON.stringify(carrito));
-    mostrarCarritoDeCompras(); // Actualizar la vista del carrito
+    // Actualizar la vista del carrito
+    mostrarCarritoDeCompras();  // Llamar a la función que actualiza el carrito en la interfaz
 }
+
 
 
 
@@ -164,14 +174,14 @@ document.getElementById('carrito-items').addEventListener('click', function (eve
     const target = event.target;
 
     if (target.classList.contains('agregar-mas')) {
-        const id = parseInt(target.getAttribute('data-id'));
-        agregarMasProducto(id); // Llamar a la función para agregar más productos
+        const uniqueId = target.getAttribute('data-id');
+        agregarMasProducto(uniqueId); // Llamar a la función para agregar más productos
 
     }
 
     if (target.classList.contains('eliminar')) {
-        const id = parseInt(target.getAttribute('data-id'));
-        eliminarProducto(id); // Llamar a la función para eliminar el producto
+        const uniqueId = target.getAttribute('data-id');
+        eliminarProducto(uniqueId); // Llamar a la función para eliminar el producto
     }
     document.addEventListener('DOMContentLoaded', mostrarCarritoDeCompras);
 
